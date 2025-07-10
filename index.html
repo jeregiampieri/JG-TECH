@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JG TECH</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./fav-icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./fav-icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./fav-icons/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+</head>
+<!-- Cuerpo de todo el documento, es decir, de la página que va a ser visualizada por el usuario final -->
+<body>
+    <header>
+        <img src="./img/JG-TECH logo.png" alt="Logo de JG-TECH">
+        <input type="text" placeholder="Busca tus productos aquí..." class="input-busqueda">
+        <!-- Como son los elementos que van a permitir la navegabilidad en la página, acá defino la etiqueta nav -->
+        <nav class="navbar">
+            <!-- Defino la lista donde se van a encontrar los elementos Home, Productos, etc -->
+            <ul class="navbar-lista">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#nosotros">Sobre nosotros</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#inicioSesion">Ingreso</a></li>
+                <li><a href="#registro">Registro</a></li>
+            </ul>
+            <!-- Al carrito lo quito de la lista del navbar porque no es un elemento que me permita navegar en la página -->
+        </nav>
+        <label for="carrito-toggle" class="carrito-label">
+                <i class="fa-solid fa-cart-arrow-down fa-bounce"></i>
+            </label>
+    </header>
+    <main>
+        <section id="hero">
+            <div class="hero-info">
+                <h1>JG-TECH</h1>
+                <p>Nuestra misión es ayudarte a encontrar los mejores componentes para tu setup, sin vueltas y buena onda.
+                Queremos que disfrutes armar tu PC como vos querés, con asesoramiento real, buenos precios y atención cercana. 
+                Estamos para hacerte la vida más fácil en el mundo tech.</p>
+                <button class="boton-ver">Ver más</button>
+            </div>
+        </section>
+    </main>
+    
+</body>
+</html>

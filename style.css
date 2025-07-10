@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800;900&display=swap');
+
+/* Reseteo de las variables */
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+    /* border: 1px solid red; */
+}
+
+body {
+    background-color: black;
+}
+
+/* Ajustes en todo el navbar */
+header{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* Recordar que el header siempre lleva un height y no tiene que ser con % al no tener una altura definida el contenedor padre */
+    height: 70px;
+    /* background: #270040;
+    background: linear-gradient(180deg,rgba(39, 0, 64, 1) 0%, rgba(19, 20, 21, 1) 57%, rgb(0, 0, 0) 100%); */
+    padding: 0px 40px 0px 0px;
+    border-bottom: 1px solid #ffffffbf;
+}
+
+header img{
+    margin-bottom: 0.5%;
+    width: 15%;
+}
+
+.input-busqueda{
+    width: 30%;
+    border-radius: 15px;
+    padding-left: 10px;
+    height: 40%;
+    border: 1px solid black;
+}
+
+.navbar-lista{
+    display: flex;
+    gap: 20px;
+    padding: 0px 50px 0px 80px;
+}
+
+.navbar-lista li a{
+    color: white;
+    transition: all 0.5s ease;
+}
+
+.navbar-lista li:first-child{
+    font-weight: 600;
+}
+
+.navbar-lista li a:hover{
+    padding: 0px 5px 0px 5px;
+}
+
+.carrito-label{
+    color: white;
+    font-size: 150%;
+}
+/* Finalizacion del navbar */
+
+/* Comienzo del hero */
+#hero{
+    padding: 70px;
+    margin-top: 70px;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    animation: bg 20s ease-in-out infinite alternate;
+}
+
+.hero-info{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    gap: 20px;
+}
+
+@keyframes bg {
+    0%{
+        background-image: url(./img/imagenPC1.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    50%{
+        background-image: url(./img/imagenPC2.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    100%{
+        background-image: url(./img/imagenPC3.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.hero-info h1 {
+    font-family: 'Monoton', cursive;
+    font-size: 100px;
+    color: #ffffffd3;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    z-index: 1;
+}
+
+.hero-info p{
+    color: #ffffff;
+    z-index: 1;
+}
+
+.boton-ver{
+    background-color: #131415;
+    border: 1px solid white;
+    color: white;
+    width: 25%;
+    height: auto;
+    padding: 5px 0px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.boton-ver:hover{
+    background-color: #ffffffe3;
+    color: #131415;
+}
