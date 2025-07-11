@@ -15,14 +15,14 @@
 <!-- Cuerpo de todo el documento, es decir, de la página que va a ser visualizada por el usuario final -->
 <body>
     <header>
-        <img src="./img/JG-TECH logo.png" alt="Logo de JG-TECH">
+        <img src="./img/JG-TECH-logo.png" alt="Logo de JG-TECH">
         <input type="text" placeholder="Busca tus productos aquí..." class="input-busqueda">
         <!-- Como son los elementos que van a permitir la navegabilidad en la página, acá defino la etiqueta nav -->
         <nav class="navbar">
             <!-- Defino la lista donde se van a encontrar los elementos Home, Productos, etc -->
             <ul class="navbar-lista">
                 <li><a href="#hero">Home</a></li>
-                <li><a href="#nosotros">Sobre nosotros</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
                 <li><a href="#productos">Productos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
                 <li><a href="#inicioSesion">Ingreso</a></li>
@@ -35,6 +35,7 @@
             </label>
     </header>
     <main>
+        <!-- Primera sección de la página (hero) -->
         <section id="hero">
             <div class="hero-info">
                 <h1>JG-TECH</h1>
@@ -43,7 +44,58 @@
                 Estamos para hacerte la vida más fácil en el mundo tech.</p>
                 <button class="boton-ver">Ver más</button>
             </div>
+            <!-- Contenedor que utilizo unicamente para colocar las imagenes de fondo -->
+            <div class="hero-imagenes">
+
+            </div>
         </section>
+        <!-- Segunda sección de la página (nosotros) -->
+         <section id="nosotros">
+            <div class="nosotros-titulo">
+                <i class="fa-solid fa-laptop-code compu"></i>
+                <h1>¿Quiénes somos?</h1>
+            </div>
+            <div class="nosotros-info">
+                <p>
+                    Un equipo que vive y respira tecnología. Empezamos este proyecto con ganas de crear algo propio, combinando conocimiento,
+                     pasión y mucha dedicación. En JG-TECH no solo vendemos hardware: acompañamos a cada persona que quiere mejorar su PC, iniciar 
+                     un proyecto o simplemente disfrutar del mundo tech con confianza y estilo
+                </p>
+            </div>
+         </section>
+         <!-- Tercera sección de la página (productos) -->
+          <section id="productos">
+            <div class="productos-titulo">
+                <i class="fa-solid fa-keyboard teclado"></i>
+                 <h1>Productos</h1>  
+            </div>
+            <div class="productos-contenedor">
+                <div class="card-producto">
+                    <img src="./img/imagenGabinete1.png" alt="Imagen de gabinete">
+                    <p>Gabinete Gamemax Nova N6 Mid Tower ATX ARGB</p>
+                    <div class="detalle">
+                        <p class="precio">$44.990</p>
+                        <button>Comprar</button>
+                    </div>
+                </div>
+                <div class="card-producto">
+                    <img src="./img/imagenGabinete1.png" alt="Imagen de gabinete">
+                    <p>Gabinete Gamemax Nova N6 Mid Tower ATX ARGB</p>
+                    <div class="detalle">
+                        <p class="precio">$44.990</p>
+                        <button>Comprar</button>
+                    </div>
+                </div>
+                <div class="card-producto">
+                    <img src="./img/imagenGabinete1.png" alt="Imagen de gabinete">
+                    <p>Gabinete Gamemax Nova N6 Mid Tower ATX ARGB</p>
+                    <div class="detalle">
+                        <p class="precio">$44.990</p>
+                        <button>Comprar</button>
+                    </div>
+                </div>
+            </div>
+          </section>
     </main>
     
 </body>
