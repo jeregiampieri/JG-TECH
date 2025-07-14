@@ -292,6 +292,11 @@ header img{
 .card-producto img{
     width: 40%;
     height: 150px;
+    transition: all 0.5s ease;
+}
+
+.card-producto img:hover{
+    scale: 1.2;
 }
 
 .detalle{
@@ -322,5 +327,10 @@ header img{
     color: #131415;
     border: 1px solid #131415;
 }
+/* Fin de los ajustes en producto */
 
+/* Comienzo de los ajustes en contacto */
 
+#contacto h1{
+    color: white;
+}
