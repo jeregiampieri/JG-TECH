@@ -243,7 +243,7 @@ header img{
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-bottom: 80px;
+    margin-bottom: 100px;
     background-color: #ffffffed;
     padding: 30px 0px 30px 0px;
 }
@@ -330,7 +330,92 @@ header img{
 /* Fin de los ajustes en producto */
 
 /* Comienzo de los ajustes en contacto */
+#contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 35px;
+    margin-bottom: 30px;
+}
 
 #contacto h1{
     color: white;
+    font-weight: 500;
 }
+
+.contenedor-contacto{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 35px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: #101112;
+    width: 30%;
+}
+
+.contenedor-titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.contenedor-contacto img{
+    width: 50px;
+    height: 50px;
+    filter: brightness(1);
+}
+
+.contenedor-titulo h2{
+    color: white;
+    font-weight: 500;
+    order: 2;
+    font-size: 19px;
+}
+
+.contacto-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.contacto-info input{
+    background-color: #101112;
+    border: 1px solid white;
+    padding: 5px;
+    color: white;
+    width: 80%;
+}
+
+.contacto-info textarea{
+    background-color: #101112;
+    border: 1px solid white;
+    padding: 5px;
+    color: white;
+    width: 80%;
+}
+
+.contacto-info button{
+    width: 100px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    border: 1px solid #101112;
+}
+
+.contacto-info button:hover{
+    background-color: #101112;
+    color: white;
+    border: 1px solid white;
+}
+/* Fin de los ajustes en contacto */
+
+
+
+
+
+
