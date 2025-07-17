@@ -446,6 +446,7 @@ footer{
     width: 100%;
     justify-content: center;
     align-items: center;
+    gap: 70px;
 }
 
 .footer-contacto{
