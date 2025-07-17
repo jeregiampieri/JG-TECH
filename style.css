@@ -169,7 +169,8 @@ header img{
     gap: 20px;
     margin-bottom: 50px;
     padding: 20px;
-    border-bottom: 1px solid rgb(32, 32, 32);
+    border-bottom: 1px solid rgb(52, 52, 52);
+    /* (32,32,32) */
     /* background-color: red; */
 }
 
@@ -243,9 +244,9 @@ header img{
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-bottom: 100px;
     background-color: #ffffffed;
-    padding: 30px 0px 30px 0px;
+    padding: 30px 0px 0px 0px;
+    margin-bottom: 30px;
 }
 
 #productos h1{
@@ -337,7 +338,6 @@ header img{
     align-items: center;
     width: 100%;
     gap: 35px;
-    margin-bottom: 30px;
 }
 
 #contacto h1{
@@ -423,6 +423,139 @@ header img{
     border: 1px solid white;
 }
 /* Fin de los ajustes en contacto */
+
+/* Comienzo de los ajustes en footer */
+.contenedor-footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.linea-separadora{
+    width: 100%;
+    height: 1px;
+    background-color: rgb(52, 52, 52);
+    margin-top: 30px;
+}
+
+footer{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    gap: 15px;
+}
+
+.contacto-numero{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacto-numero p{
+    font-size: 14px;
+    color: #ffffffd3;
+    font-weight: 500;
+}
+
+.icono{
+    color: #ffffffd3;
+    font-size: 120%;
+}
+
+.contacto-mail{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacto-mail p{
+    font-size: 14px;
+    color: #ffffffd3;
+    font-weight: 500;
+}
+
+.contacto-ubicacion{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacto-ubicacion p{
+    font-size: 14px;
+    color: #ffffffd3;
+    font-weight: 500;
+}
+
+.footer-medios-de-pago{
+    display: flex;
+    gap: 20px;
+    width: 25%;
+}
+
+.icono-pago{
+    font-size: 200%;
+    color: #ffffffd3;
+}
+
+.footer-otros{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    width: 25%;
+    height: auto;
+}
+
+.footer-otros-redes{
+    display: flex;
+    gap: 10px;
+}
+
+.footer-otros-info p{
+    color: #ffffffd3;
+    font-size: 14px;
+}
+
+.footer-otros-politicas{
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    align-items: center;
+}
+
+.footer-otros-politicas p{
+    color: #ffffffd3;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.footer-otros-politicas p:hover{
+    padding: 0px 5px 0px 5px;
+}
+
+/* Finalizacion de los ajustes en el footer */
+
+
+
+
+
+
 
 
 
