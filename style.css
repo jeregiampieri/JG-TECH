@@ -354,6 +354,13 @@ header img{
     border-radius: 10px;
     background-color: #101112;
     width: 30%;
+    transition: all 0.3s ease;
+}
+
+.contenedor-contacto:hover{
+    box-shadow: 0px 0px 8px 0px rgba(255,255,255,1);
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(255,255,255,1);
 }
 
 .contenedor-titulo{
@@ -385,7 +392,9 @@ header img{
 
 .contacto-info input{
     background-color: #101112;
-    border: 1px solid white;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
     padding: 5px;
     color: white;
     width: 80%;
@@ -397,6 +406,7 @@ header img{
     padding: 5px;
     color: white;
     width: 80%;
+    resize: none;
 }
 
 .contacto-info button{
