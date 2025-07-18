@@ -549,9 +549,13 @@ footer{
 .footer-otros-politicas p:hover{
     padding: 0px 5px 0px 5px;
 }
-
 /* Finalizacion de los ajustes en el footer */
 
+/* Menu hamburguesa, como estoy en PC no lo necesito, por lo tanto lo dejo oculto */
+#menu-toggle,
+.menu-label i{
+    display: none;
+}
 
 
 
