@@ -511,8 +511,10 @@ footer{
 
 .footer-medios-de-pago{
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
-    width: 25%;
+    width: 33.3%;
 }
 
 .icono-pago{
@@ -524,8 +526,9 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 15px;
-    width: 25%;
+    width: 33.3%;
     height: auto;
 }
 
@@ -544,6 +547,7 @@ footer{
     gap: 15px;
     width: 100%;
     align-items: center;
+    justify-content: center;
 }
 
 .footer-otros-politicas p{

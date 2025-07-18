@@ -1,4 +1,4 @@
-@media (min-width: 992px) and (max-width:1199px){
+@media (min-width: 992px) and (max-width:1246px){
 
     /* Ajustes en todo lo relacionado con el header */
     header{
@@ -120,7 +120,25 @@
     /* Fin de los ajustes en la sección contacto */
 
     /* Comienzo de los ajustes en el footer */
-    
+    .footer-contacto{
+        width: 25%;
+    }
+
+    .footer-contacto p{
+        font-size: 12.8px;
+    }
+
+    .footer-medios-de-pago{
+        width: 30%;
+    }
+
+    .footer-otros p{
+        font-size: 12.8px;
+    }
+
+    .footer-otros-politicas p{
+        font-size: 9.5px;
+    }
 
 
 }
