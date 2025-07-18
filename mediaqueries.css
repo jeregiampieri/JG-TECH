@@ -69,7 +69,57 @@
     }
     /* Fin de los ajustes en el hero */
 
+    /* Comienzo de los ajustes en la seccion nosotros */
+    #nosotros h1{
+        font-size: 23px;
+    }
 
+    .nosotros-info p{
+        font-size: 14.4px;
+    }
+
+    .compu{
+        font-size: 150%;
+    }
+    /* Fin de los ajustes en la seccion nosotros */
+
+    /* Comienzo de los ajustes en la seccion producto */
+    #productos h1{
+        font-size: 23px;
+    }
+
+    .teclado{
+        font-size: 150%;
+    }
+
+    .card-producto{
+        height: 270px;
+    }
+
+    .card-producto img{
+        height: 100px;
+    }
+
+    .card-producto p{
+        font-size: 14px;
+    }
+
+    .detalle p{
+        font-size: 14px;
+    }
+    /* Fin de los ajustes en la sección productos */
+
+    /* Comienzo de los ajustes en la sección contacto */
+    #contacto h1{
+        font-size: 23px;
+    }
+
+    .contenedor-contacto{
+        width: 40%;
+    }
+    /* Fin de los ajustes en la sección contacto */
+
+    /* Comienzo de los ajustes en el footer */
     
 
 
