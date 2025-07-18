@@ -1,0 +1,76 @@
+@media (min-width: 992px) and (max-width:1199px){
+
+    /* Ajustes en todo lo relacionado con el header */
+    header{
+        border-bottom: none;
+    }
+
+    header img{
+        width: 20%;
+    }
+
+    .input-busqueda{
+        width: 50%;
+    }
+
+    .menu-label{
+        order: 4;
+    }
+
+    .menu-label i{
+        display: flex;
+        color: white;
+        font-size: 150%;
+    }
+
+    .navbar{
+        gap: 35px;
+    }
+
+    /* Los elementos del navbar ya se me hacen muy grandes, por lo que es mejor usar el menú hamburguesa */
+    .navbar-lista{
+        position: absolute;
+        /* Como el height de mi header es de 70px, entonces lo ideal seria colocarlo justo debajo del header */
+        top: 70px;
+        width: 90%;
+        left: 5%;
+        right: 5%;
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+        /* Para que haya separación */
+        padding-bottom: 1.1%;
+        padding-top: 1.1%;
+        backdrop-filter: blur(23px);
+        -webkit-backdrop-filter: blur(20px);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        border: 1px solid rgb(52, 52, 52);
+        border-top: none;
+        text-align: center;
+        border-radius: 2px;
+        /* Para ocultar el menu en el flujo del documento cuando no esta checked el menu hamburguesa */
+        transform: translateX(150%);
+        transition: all 0.2s ease;
+    }
+
+    /* Básicamente estoy diciendo que si el input menu-toggle esta 'clickeado', entonces el elemento hermano inmediato va a tener dicha propiedad */
+    #menu-toggle:checked + .navbar-lista{
+        transform: translate(0%);
+    }
+    /* Fin de los ajustes en el header */
+    /* Comienzo de los ajustes en el hero */
+    .hero-info h1{
+        font-size: 75px;
+    }
+
+    .hero-info p{
+        font-size: 15px;
+    }
+    /* Fin de los ajustes en el hero */
+
+
+    
+
+
+}
