@@ -61,7 +61,7 @@
     /* Fin de los ajustes en el header */
     /* Comienzo de los ajustes en el hero */
     .hero-info h1{
-        font-size: 75px;
+        font-size: 55px;
     }
 
     .hero-info p{
@@ -203,17 +203,22 @@
     /* Comienzo de ajustes en la seccion hero */
 
     .hero-info h1{
-        font-size: 56px;
+        font-size: 4rem;
     }
 
     .hero-info p{
-        font-size: 13.5px;
+        font-size: 0.65rem;
+    }
+
+    .boton-ver{
+        width: 25%;
+        padding: 0.10rem 0px;
     }
     /* Fin de los ajustes en la sección hero */
 
     /* Comienzo de ajustes en la sección nosotros */
     #nosotros h1{
-        font-size: 20px;
+        font-size: 1rem;
     }
 
     .nosotros-info p{
