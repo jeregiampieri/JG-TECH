@@ -430,6 +430,17 @@ header img{
 /* Fin de los ajustes en contacto */
 
 /* Comienzo de los ajustes en footer */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+}
+
 .contenedor-footer{
     display: flex;
     flex-direction: column;
@@ -444,16 +455,6 @@ header img{
     height: 1px;
     background-color: rgb(52, 52, 52);
     margin-top: 30px;
-}
-
-footer{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 25px;
 }
 
 .contenedor-footer-1{
@@ -475,7 +476,7 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 33%;
+    width: 50%;
     gap: 15px;
 }
 
@@ -542,7 +543,7 @@ footer{
     justify-content: center;
     align-items: center;
     gap: 15px;
-    width: 33.3%;
+    width: 50%;
     height: auto;
 }
 

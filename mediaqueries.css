@@ -129,7 +129,7 @@
 
     /* Comienzo de los ajustes en el footer */
     .footer-contacto{
-        width: 25%;
+        width: 50%;
     }
 
     .footer-contacto p{
@@ -138,6 +138,10 @@
 
     .footer-medios-de-pago{
         width: 30%;
+    }
+
+    .footer-otros{
+        width: 50%;
     }
 
     .footer-otros p{
@@ -248,7 +252,7 @@
 
     /* Comienzo de los ajustes en productos */
     #productos h1{
-        font-size: 20px;
+        font-size: 1.4;
     }
 
     .teclado{
@@ -261,7 +265,8 @@
     }
 
     .card-producto img{
-        height: auto;
+        width: 150px;
+        height: 150px;
     }
 
     .card-producto p{
@@ -283,19 +288,18 @@
         width: 500px;
     }
     /* Fin de los ajustes en la seccion contacto */
-    
+
     /* Comienzo de los ajustes en el footer */
-    .footer-contacto{
+    footer-contacto{
         width: 50%;
     }
 
     .footer-contacto p{
-        font-size: 11px;
+        font-size: 0.8rem;
     }
 
-    /* La oculto ya que me parece mas relevante el resto de los elementos a la hora de darle información al usuario final */
     .footer-medios-de-pago{
-        display: none;
+        width: 30%;
     }
 
     .footer-otros{
@@ -303,19 +307,17 @@
     }
 
     .footer-otros p{
-        font-size: 12.8px;
+        font-size: 0.8rem;
     }
 
     .footer-otros-politicas p{
-        padding: 0px 5px 0px 0px;
-        font-size: 8.5px;
+        font-size: 0.7rem;
     }
     /* Fin de los ajustes en el footer */
     /* Finalizado el responsive para escritorios grandes */
-
 }
 
-@media (min-width: 701px) and (max-width: 768px){
+@media (min-width: 576px) and (max-width: 768px){
     /* Ajustes en el header */
     header{
         border-bottom: none;
@@ -326,7 +328,7 @@
     }
 
     .input-busqueda{
-        width: 50%;
+        width: 40%;
     }
 
     .menu-label{
@@ -373,22 +375,22 @@
 
     /* Comienzo de ajustes en la seccion hero */
     .hero-info{
-        width: 450px;
-        padding: 10px;
+        width: 470px;
+        padding: 0px 0px 0px 10px;
     }
 
     .hero-info h1{
-        font-size: 4.5rem;
+        font-size: 5rem;
     }
 
     .hero-info p{
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
     /* Fin de los ajustes en la seccion hero */
 
      /* Comienzo de ajustes en la sección nosotros */
-    #nosotros h1{
-        font-size: 1rem;
+     #nosotros h1{
+        font-size: 1.4rem;
     }
 
     .nosotros-info{
@@ -396,20 +398,20 @@
     }
 
     .nosotros-info p{
-        font-size: 13.5px;
+        font-size: 0.9rem;
     }
 
     .compu{
-        font-size: 140%;
+        font-size: 150%;
     }
     /* Fin de los ajustes en la sección nosotros */
     /* Comienzo de los ajustes en productos */
     #productos h1{
-        font-size: 20px;
+        font-size: 1.4;
     }
 
     .teclado{
-        font-size: 140%;
+        font-size: 150%;
     }
 
     .card-producto{
@@ -418,49 +420,41 @@
     }
 
     .card-producto img{
-        height: auto;
+        width: 150px;
+        height: 150px;
     }
 
     .card-producto p{
-        font-size: 13.5px;
+        font-size: 1rem;
         width: 65%;
     }
 
-    .precio{
-        font-size: 13.5px;
-    }
-
     .detalle button{
-        font-size: 13.5px;
+        font-size: 0.9rem;
     }
     /* Fin de los ajustes en productos */
 
      /* Comienzo de ajustes en la seccion contacto */
     #contacto h1{
-        font-size: 1.45rem;
+        font-size: 1.4rem;
     }
 
     .contenedor-contacto{
-        width: 450px;
-    }
-
-    .contenedor-titulo h2{
-        font-size: 1.25rem;
+        width: 500px;
     }
     /* Fin de los ajustes en la seccion contacto */
 
     /* Comienzo de los ajustes en el footer */
-    .footer-contacto{
+    footer-contacto{
         width: 50%;
     }
 
     .footer-contacto p{
-        font-size: 11px;
+        font-size: 0.8rem;
     }
 
-    /* La oculto ya que me parece mas relevante el resto de los elementos a la hora de darle información al usuario final */
     .footer-medios-de-pago{
-        display: none;
+        width: 30%;
     }
 
     .footer-otros{
@@ -468,176 +462,15 @@
     }
 
     .footer-otros p{
-        font-size: 12.8px;
+        font-size: 0.8rem;
     }
 
     .footer-otros-politicas p{
-        padding: 0px 5px 0px 0px;
-        font-size: 8.5px;
+        font-size: 0.7rem;
     }
     /* Fin de los ajustes en el footer */
 }
 
-@media (min-width: 568px) and (max-width: 701px){
-    /* Ajustes en el header */
-    header{
-        border-bottom: none;
-    }
-
-    header img{
-        width: 150px;
-    }
-
-    .input-busqueda{
-        width: 50%;
-    }
-
-    .menu-label{
-        order: 4;
-    }
-
-    .menu-label i{
-        display: flex;
-        color: white;
-        font-size: 150%;
-    }
-
-    .navbar{
-        gap: 35px;
-    }
-
-    .navbar-lista{
-        position: absolute;
-        top: 70px;
-        width: 90%;
-        left: 5%;
-        right: 5%;
-        flex-direction: column;
-        gap: 15px;
-        justify-content: center;
-        align-items: center;
-        padding-bottom: 1.1%;
-        padding-top: 1.1%;
-        backdrop-filter: blur(23px);
-        -webkit-backdrop-filter: blur(20px);
-        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-        border: 1px solid rgb(52, 52, 52);
-        border-top: none;
-        text-align: center;
-        border-radius: 2px;
-        transform: translateX(150%);
-        transition: all 0.2s ease;
-    }
-
-    #menu-toggle:checked + .navbar-lista{
-        transform: translate(0%);
-    }
-    /* Fin de los ajustes en el header */
-
-    /* Comienzo de ajustes en la seccion hero */
-    .hero-info{
-        width: 450px;
-        padding: 10px;
-    }
-
-    .hero-info h1{
-        font-size: 4.5rem;
-    }
-
-    .hero-info p{
-        font-size: 0.8rem;
-    }
-    /* Fin de los ajustes en la seccion hero */
-
-    /* Comienzo de ajustes en la sección nosotros */
-    #nosotros h1{
-        font-size: 1.2rem;
-    }
-
-    .nosotros-info{
-        width: 450px;
-    }
-
-    .nosotros-info p{
-        font-size: 13.5px;
-    }
-
-    .compu{
-        font-size: 140%;
-    }
-    /* Fin de los ajustes en la sección nosotros */
-    /* Comienzo de los ajustes en productos */
-    #productos h1{
-        font-size: 20px;
-    }
-
-    .teclado{
-        font-size: 140%;
-    }
-
-    .card-producto{
-        height: 320px;
-        width: 50%;
-    }
-
-    .card-producto img{
-        height: auto;
-    }
-
-    .card-producto p{
-        font-size: 13.5px;
-        width: 65%;
-    }
-
-    .precio{
-        font-size: 13.5px;
-    }
-
-    .detalle button{
-        font-size: 13.5px;
-    }
-    /* Fin de los ajustes en productos */
-    /* Comienzo de ajustes en la seccion contacto */
-    #contacto h1{
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        font-size: 1.20rem;
-    }
-
-    .contenedor-contacto{
-        width: 400px;
-    }
-
-    .contenedor-titulo h2{
-        font-size: 1.25rem;
-    }
-    /* Fin de los ajustes en la seccion contacto */
-
-    /* Comienzo de los ajustes en el footer */
-    .footer-contacto{
-        width: 50%;
-    }
-
-    .footer-contacto p{
-        font-size: 11px;
-    }
-
-    /* La oculto ya que me parece mas relevante el resto de los elementos a la hora de darle información al usuario final */
-    .footer-medios-de-pago{
-        display: none;
-    }
-
-    .footer-otros{
-        width: 50%;
-    }
-
-    .footer-otros p{
-        font-size: 12.8px;
-    }
-
-    .footer-otros-politicas p{
-        font-size: 7px;
-    }
-    /* Fin de los ajustes en el footer */
+@media (min-width: 320px) and (max-width:576px){
+    
 }
