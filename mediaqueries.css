@@ -6,7 +6,7 @@
     }
 
     header img{
-        width: 20%;
+        width: 200px;
     }
     
     .input-busqueda{
@@ -62,7 +62,7 @@
     /* Comienzo de los ajustes en el hero */
 
     .hero-info{
-        width: 55%;
+        width: 450px;
     }
 
     .hero-info h1{
@@ -70,7 +70,7 @@
     }
 
     .hero-info p{
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         /* background-color: red; */
     }
     /* Fin de los ajustes en el hero */
@@ -80,8 +80,12 @@
         font-size: 1.4rem;
     }
 
+    .nosotros-info{
+        width: 450px;
+    }
+
     .nosotros-info p{
-        font-size: 0.90rem;
+        font-size: 0.9rem;
     }
 
     .compu{
@@ -103,16 +107,14 @@
     }
 
     .card-producto img{
-        height: auto;
+        width: 150px;
+        height: 150px;
     }
 
     .card-producto p{
-        font-size: 0.90rem;
+        font-size: 0.9rem;
     }
 
-    .detalle p{
-        font-size: 0.90rem;
-    }
     /* Fin de los ajustes en la sección productos */
 
     /* Comienzo de los ajustes en la sección contacto */
@@ -121,7 +123,7 @@
     }
 
     .contenedor-contacto{
-        width: 40%;
+        width: 500px;
     }
     /* Fin de los ajustes en la sección contacto */
 
@@ -157,11 +159,11 @@
     }
 
     header img{
-        width: 25%;
+        width: 200px;
     }
 
     .input-busqueda{
-        width: 40%;
+        width: 50%;
     }
 
     .menu-label{
@@ -208,16 +210,16 @@
 
     /* Comienzo de ajustes en la seccion hero */
     .hero-info{
-        width: 71%;
-        padding: 10px;
+        width: 470px;
+        padding: 0px 0px 0px 10px;
     }
 
     .hero-info h1{
-        font-size: 4.5rem;
+        font-size: 5rem;
     }
 
     .hero-info p{
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 
     /* .boton-ver{
@@ -228,19 +230,19 @@
 
     /* Comienzo de ajustes en la sección nosotros */
     #nosotros h1{
-        font-size: 1rem;
+        font-size: 1.4rem;
     }
 
     .nosotros-info{
-        width: 60%;
+        width: 450px;
     }
 
     .nosotros-info p{
-        font-size: 13.5px;
+        font-size: 0.9rem;
     }
 
     .compu{
-        font-size: 140%;
+        font-size: 150%;
     }
     /* Fin de los ajustes en la sección nosotros */
 
@@ -250,7 +252,7 @@
     }
 
     .teclado{
-        font-size: 140%;
+        font-size: 150%;
     }
 
     .card-producto{
@@ -263,33 +265,25 @@
     }
 
     .card-producto p{
-        font-size: 13.5px;
+        font-size: 1rem;
         width: 65%;
     }
 
-    .precio{
-        font-size: 13.5px;
-    }
-
     .detalle button{
-        font-size: 13.5px;
+        font-size: 0.9rem;
     }
     /* Fin de los ajustes en productos */
 
     /* Comienzo de ajustes en la seccion contacto */
     #contacto h1{
-        font-size: 20px;
+        font-size: 1.4rem;
     }
 
     .contenedor-contacto{
-        width: 50%;
-    }
-
-    .contenedor-titulo h2{
-        font-size: 20px;
+        width: 500px;
     }
     /* Fin de los ajustes en la seccion contacto */
-
+    
     /* Comienzo de los ajustes en el footer */
     .footer-contacto{
         width: 50%;
@@ -328,7 +322,7 @@
     }
 
     header img{
-        width: 25%;
+        width: 200px;
     }
 
     .input-busqueda{
@@ -379,7 +373,7 @@
 
     /* Comienzo de ajustes en la seccion hero */
     .hero-info{
-        width: 75%;
+        width: 450px;
         padding: 10px;
     }
 
@@ -398,7 +392,7 @@
     }
 
     .nosotros-info{
-        width: 60%;
+        width: 450px;
     }
 
     .nosotros-info p{
@@ -443,15 +437,15 @@
 
      /* Comienzo de ajustes en la seccion contacto */
     #contacto h1{
-        font-size: 20px;
+        font-size: 1.45rem;
     }
 
     .contenedor-contacto{
-        width: 50%;
+        width: 450px;
     }
 
     .contenedor-titulo h2{
-        font-size: 1.1rem;
+        font-size: 1.25rem;
     }
     /* Fin de los ajustes en la seccion contacto */
 
@@ -491,7 +485,7 @@
     }
 
     header img{
-        width: 25%;
+        width: 150px;
     }
 
     .input-busqueda{
@@ -542,7 +536,7 @@
 
     /* Comienzo de ajustes en la seccion hero */
     .hero-info{
-        width: 85%;
+        width: 450px;
         padding: 10px;
     }
 
@@ -561,7 +555,7 @@
     }
 
     .nosotros-info{
-        width: 70%;
+        width: 450px;
     }
 
     .nosotros-info p{
@@ -605,15 +599,18 @@
     /* Fin de los ajustes en productos */
     /* Comienzo de ajustes en la seccion contacto */
     #contacto h1{
-        font-size: 20px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 1.20rem;
     }
 
     .contenedor-contacto{
-        width: 50%;
+        width: 400px;
     }
 
     .contenedor-titulo h2{
-        font-size: 1.1rem;
+        font-size: 1.25rem;
     }
     /* Fin de los ajustes en la seccion contacto */
 
@@ -640,8 +637,7 @@
     }
 
     .footer-otros-politicas p{
-        padding: 0px 5px 0px 0px;
-        font-size: 8.5px;
+        font-size: 7px;
     }
     /* Fin de los ajustes en el footer */
 }

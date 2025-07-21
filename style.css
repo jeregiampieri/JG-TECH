@@ -448,10 +448,26 @@ header img{
 
 footer{
     display: flex;
+    flex-direction: column;
     width: 100%;
     justify-content: center;
     align-items: center;
-    gap: 70px;
+    text-align: center;
+    gap: 25px;
+}
+
+.contenedor-footer-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.contenedor-footer-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .footer-contacto{
