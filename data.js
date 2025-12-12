@@ -292,7 +292,23 @@ const productosData = [
     }
 ]
 
-// Paginado de los productos
+// El parámetro tamaño es para indicar cuantos productos quiero tener en cada paginación que se renderiza
+const paginacionProducts = (cantidadProductos) => {
+    let productsList = []
+    for (let i = 0; i < productosData.length; i += cantidadProductos){
+         productsList.push(productosData.slice(i, i + cantidadProductos))
+    }
+    return productsList
+}
+
+//Objeto que me permite mantener y conocer el 'estado' de la página
+const appState = {
+    products: paginacionProducts(8),
+    cantMaxPage: paginacionProducts(8).length, 
+    currentProductsIndex: 0,
+    activeFilter: null
+}
+
 
 // Fin del array de objetos
 

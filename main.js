@@ -1,5 +1,7 @@
 // Tomo el contenedor de los productos
 const productsContainer = document.querySelector(".productos-contenedor") 
+// Tomo el boton ver más 
+const verMasBoton = document.querySelector(".boton-ver-mas")
 
 // Primero que todo, necesito traer el localStorage por si han quedado productos almacenados en el browser del usuario
 // Como guardo los datos como 'cart' en el localStorage, entonces debo usar el mismo nombre para recuperarlos del localStorage
@@ -33,7 +35,7 @@ const productosTemplate = (producto) => {
 
 // Función inicializadora, es la puerta de entrada de la aplicación, lo primero que se ejecuta en la misma, acá se coloca lo que quiero que se ejecute ni bien arranca la página
 const init = () => {
-    renderProducts(productosData)
+    renderProducts(appState.products[0])
 }
 
 init()
