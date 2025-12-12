@@ -108,7 +108,7 @@ header img{
 
 @keyframes bg {
     0%{
-        background-image: url(./img/imagenPC1.jpg);
+        background-image: url(/img/imagenPC1.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -116,14 +116,14 @@ header img{
     }
 
     50%{
-        background-image: url(./img/imagenPC2.jpg);
+        background-image: url(/img/imagenPC2.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         opacity: 0.3;
     }
     100%{
-        background-image: url(./img/imagenPC3.jpg);
+        background-image: url(/img/imagenPC3.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -269,6 +269,50 @@ header img{
 .teclado{
     color: #ffffffe3;
     font-size: 170%;
+}
+
+.filtros-contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.categorias{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.701);
+    padding: 8px 20px;
+    border-radius: 5px;
+    transition: all 0.8s ease;
+    cursor: pointer;
+    gap: 8px;
+}
+
+.categorias:hover{
+    background-color: #ffffffe3;
+    border: 1px solid #131415;
+}
+
+.categorias:hover p{
+    color: #131415
+}
+
+.categorias:hover i{
+    color: #131415
+}
+
+.icono-categoria{
+    color: #ffffffd3;
+    font-size: 80%;
+    transition: all 0.5s ease;
+}
+
+.titulo-categoria{
+    color: #ffffffe3;
+    font-weight: 500;
 }
 
 .productos-contenedor{

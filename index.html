@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JG TECH</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/assets/styles/style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="./fav-icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./fav-icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./fav-icons/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="animaciones.css">
-    <link rel="stylesheet" href="mediaqueries.css">
+    <link rel="stylesheet" href="/assets/styles/animaciones.css">
+    <link rel="stylesheet" href="/assets/styles/mediaqueries.css">
 </head>
 <!-- Cuerpo de todo el documento, es decir, de la página que va a ser visualizada por el usuario final -->
 <body>
@@ -76,267 +76,32 @@
                 <i class="fa-solid fa-keyboard teclado"></i>
                  <h1>Productos</h1>  
             </div>
+            <!-- Contenedor de los filtros -->
+             <div class="filtros-contenedor">
+                <div class="categorias todos">
+                    <i class="fa-solid fa-gamepad icono-categoria"></i>
+                    <p class="titulo-categoria">Todos</p>
+                </div>
+                <div class="categorias gabinetes">
+                    <i class="fa-solid fa-computer icono-categoria"></i>
+                    <p class="titulo-categoria">Gabinetes </p>
+                </div>
+                <div class="categorias graficas">
+                    <i class="fa-solid fa-sim-card icono-categoria"></i>
+                    <p class="titulo-categoria">Graficas</p>
+                </div>
+                <div class="categorias microprocesadores">
+                    <i class="fa-solid fa-microchip icono-categoria"></i>
+                    <p class="titulo-categoria">Microprocesadores</p>
+                </div>
+                <div class="categorias auriculares">
+                    <i class="fa-solid fa-headphones icono-categoria"></i>
+                    <p class="titulo-categoria">Auriculares</p>
+                </div>
+             </div>
+            <!-- Contenedor de los productos -->
             <div class="productos-contenedor">
-                <!-- Gabinetes -->
-                <div class="card-producto">
-                    <img src="./img/imagenGabinete1.png" alt="Imagen de gabinete">
-                    <p>Gabinete Gamemax Nova N6 Mid Tower ATX ARGB</p>
-                    <div class="detalle">
-                        <p class="precio">$44.990</p>
-                        <button>Comprar</button>
-                    </div>
-                </div>
-                <div class="card-producto">
-                    <img src="./img/gabinete2.png" alt="Imagen de gabinete">
-                    <p>Gabinete Gamdias Aura GC2 Elite ARGB White</p>
-                    <div class="detalle">
-                        <p class="precio">$62.990</p>
-                        <button>Comprar</button>
-                    </div>
-                </div>
-                <div class="card-producto">
-                    <img src="./img/gabinete3.png" alt="Imagen de gabinete">
-                    <p>Gabinete Gamemax Nova N5 Mid Tower ATX RGB</p>
-                    <div class="detalle">
-                        <p class="precio">$49.990</p>
-                        <button>Comprar</button>
-                    </div>
-                </div>
-                <div class="card-producto">
-                    <img src="./img/gabinete4.png" alt="Imagen de gabinete">
-                    <p>Gabinete Gamemax Storm TG ARGB Black X500810</p>
-                    <div class="detalle">
-                        <p class="precio">$65.990</p>
-                        <button>Comprar</button>
-                    </div>
-                </div>
-                <div class="card-producto">
-                    <img src="./img/gabinete5.png" alt="Imagen de gabinete">
-                    <p>Gabinete Gamdias Athena M6 Lite C/Coolers X4 TG White</p>
-                    <div class="detalle">
-                        <p class="precio">$77.990</p>
-                        <button>Comprar</button>
-                    </div>
-                </div>
-                <div class="card-producto">
-                    <img src="./img/gabinete7.png" alt="Imagen de gabinete">
-                    <p>Gabinete Gamemax Typhoon Coc Fan ARGB ATC A3610</p>
-                    <div class="detalle">
-                        <p class="precio">$79.990</p>
-                        <button>Comprar</button>
-                    </div>
-                </div>
-                <div class="card-producto">
-                    <img src="./img/gabinete8.png" alt="Imagen de gabinete">
-                    <p>Gabinete Cooler Master Elite 301 TG White A870B</p>
-                    <div class="detalle">
-                        <p class="precio">$82.990</p>
-                        <button>Comprar</button>
-                    </div>
-                </div>
-                <div class="card-producto">
-                    <img src="./img/gabinete9.png" alt="Imagen de gabinete">
-                    <p>Gabinete Gamemax Black Hole A363-TB C/Coolers ARGB</p>
-                    <div class="detalle">
-                        <p class="precio">$89.990</p>
-                        <button>Comprar</button>
-                    </div>
-                </div>
-                <!-- Placas de video -->
-                <div class="card-producto">
-                    <img src="./img/grafica1.png" alt="Imagen de gabinete">
-                    <p>Placa de video Asus Nvidia Geforce RTX 3050 Dual 06G OC D6</p>
-                    <div class="detalle">
-                        <p class="precio">$297.999</p>
-                        <button>Comprar</button>
-                    </div>
-                </div>
-                <div class="card-producto">
-                    <img src="./img/grafica2.png" alt="Imagen de gabinete">
-                    <p>Placa de video Gigabyte Geforce RTX 3060 Windforce OC 12GB</p>
-                    <div class="detalle">
-                        <p class="precio">$534.999</p>
-                        <button>Comprar</button>
-                    </div>
-                </div>
-                <div class="card-producto">
-                    <img src="./img/grafica3.png" alt="Imagen de gabinete">
-                    <p>Placa de video MSI Nvidia Geforce GTX 4060 Ventus 2X Black</p>
-                    <div class="detalle">
-                        <p class="precio">$549.999</p>
-                        <button>Comprar</button>
-                    </div>
-                </div>
-                <div class="card-producto">
-                    <img src="./img/grafica4.png" alt="Imagen de gabinete">
-                    <p>Placa de video Palit Nvidia Geforce RTX 5060 TI Dual 8GB GDDR7</p>
-                    <div class="detalle">
-                        <p class="precio">$619.999</p>
-                        <button>Comprar</button>
-                    </div>
-                </div>
-                <div class="card-producto">
-                    <img src="./img/grafica5.png" alt="Imagen de gabinete">
-                    <p>Placa de video Nvidia Geforce RTX 5060 Ti Eagle OC ICE 8GB</p>
-                    <div class="detalle">
-                        <p class="precio">$701.499</p>
-                        <button>Comprar</button>
-                    </div>
-                </div>
-                <div class="card-producto">
-                    <img src="./img/grafica7.png" alt="Imagen de gabinete">
-                    <p>Placa de video MSI Nvidia Geforce RTX 5060 Ti Gaming OC 8GB</p>
-                    <div class="detalle">
-                        <p class="precio">$790.439</p>
-                        <button>Comprar</button>
-                    </div>
-                </div>
-                <div class="card-producto">
-                    <img src="./img/grafica8.png" alt="Imagen de gabinete">
-                    <p>Placa de video Palit Nvidia Geforce RTX 5070 Gamingpro 12GB GDDR7</p>
-                    <div class="detalle">
-                        <p class="precio">$938.999</p>
-                        <button>Comprar</button>
-                    </div>
-                </div>
-                <div class="card-producto">
-                    <img src="./img/grafica9.png" alt="Imagen de gabinete">
-                    <p>Placa de video Gigabyte RTX 5060 Ti Windforce OC 16GB</p>
-                    <div class="detalle">
-                        <p class="precio">$1.044.999</p>
-                        <button>Comprar</button>
-                    </div>
-                </div>
-                <!-- Microprocesadores -->
-                 <div class="card-producto">
-                    <img src="./img/micro1.png" alt="Imagen de gabinete">
-                    <p>Microprocesador AMD Ryzen 5 5600GT 6/12 4.6GHZ Zen3</p>
-                    <div class="detalle">
-                        <p class="precio">$182.199</p>
-                        <button>Comprar</button>
-                    </div>
-                </div>
-                <div class="card-producto">
-                    <img src="./img/micro2.png" alt="Imagen de gabinete">
-                    <p>Microprocesador AMD Ryzen 7 5700G 4.6GHZ AM4</p>
-                    <div class="detalle">
-                        <p class="precio">$201.990</p>
-                        <button>Comprar</button>
-                    </div>
-                </div>
-                <div class="card-producto">
-                    <img src="./img/micro3.png" alt="Imagen de gabinete">
-                    <p>Microprocesador CPU AMD Ryzen 5 8600G 6/12 5GHZ AM5</p>
-                    <div class="detalle">
-                        <p class="precio">$206.999</p>
-                        <button>Comprar</button>
-                    </div>
-                </div>
-                <div class="card-producto">
-                    <img src="./img/micro4.png" alt="Imagen de gabinete">
-                    <p>Microprocesador AMD Ryzen 5 9600 6/12 5.2GHZ Zen5 Granite Ridge AM5</p>
-                    <div class="detalle">
-                        <p class="precio">$332.999</p>
-                        <button>Comprar</button>
-                    </div>
-                </div>
-                <div class="card-producto">
-                    <img src="./img/micro5.png" alt="Imagen de gabinete">
-                    <p>Microprocesador CPU AMD Ryzen 7 8700F 8/16 5GHZ 16MB AM5</p>
-                    <div class="detalle">
-                        <p class="precio">$360.489</p>
-                        <button>Comprar</button>
-                    </div>
-                </div>
-                <div class="card-producto">
-                    <img src="./img/micro7.png" alt="Imagen de gabinete">
-                    <p>Microprocesador AMD Ryzen 9 9900X 12/24 5.6GHZ Zen5 Granite Ridgme AM5</p>
-                    <div class="detalle">
-                        <p class="precio">$647.807</p>
-                        <button>Comprar</button>
-                    </div>
-                </div>
-                <div class="card-producto">
-                    <img src="./img/micro8.png" alt="Imagen de gabinete">
-                    <p>Microprocesador AMD Ryzen 9 7950X 16/32 5.7GHZ Raphael Zen4 AM5</p>
-                    <div class="detalle">
-                        <p class="precio">$769.999</p>
-                        <button>Comprar</button>
-                    </div>
-                </div>
-                <div class="card-producto">
-                    <img src="./img/micro9.png" alt="Imagen de gabinete">
-                    <p>Microprocesador AMD Ryzen 9 9900X3D 12/24 5.5GHZ Zen5 Granite Ridge AM5</p>
-                    <div class="detalle">
-                        <p class="precio">$895.552</p>
-                        <button>Comprar</button>
-                    </div>
-                </div>
-                <!-- Auriculares -->
-                <div class="card-producto">
-                    <img src="./img/auris1.png" alt="Imagen de gabinete">
-                    <p>Auricular Redragon Cronius H21102 RGB Black</p>
-                    <div class="detalle">
-                        <p class="precio">$41.990</p>
-                        <button>Comprar</button>
-                    </div>
-                </div>
-                <div class="card-producto">
-                    <img src="./img/auris2.png" alt="Imagen de gabinete">
-                    <p>Auricular Redragon Cronius H21102 RGB White</p>
-                    <div class="detalle">
-                        <p class="precio">$38.990</p>
-                        <button>Comprar</button>
-                    </div>
-                </div>
-                <div class="card-producto">
-                    <img src="./img/auris3.png" alt="Imagen de gabinete">
-                    <p>Auricular HyperX Cloud Stinger Core PS5 Version 2 White</p>
-                    <div class="detalle">
-                        <p class="precio">$78.320</p>
-                        <button>Comprar</button>
-                    </div>
-                </div>
-                <div class="card-producto">
-                    <img src="./img/auris4.png" alt="Imagen de gabinete">
-                    <p>Auricular Redragon Zeus X Stereo White RGB</p>
-                    <div class="detalle">
-                        <p class="precio">$90.990</p>
-                        <button>Comprar</button>    
-                    </div>
-                </div> 
-                <div class="card-producto">
-                    <img src="./img/auris5.png" alt="Imagen de gabinete">
-                    <p>Auricular Inalambrico HyperX Stinger 2 Black</p>
-                    <div class="detalle">
-                        <p class="precio">$153.990</p>
-                        <button>Comprar</button>    
-                    </div>
-                </div>
-                <div class="card-producto">
-                    <img src="./img/auricular7.png" alt="Imagen de gabinete">
-                    <p>Auricular Inalambrico Logitech G A50 X Negro Lightspeed</p>
-                    <div class="detalle">
-                        <p class="precio">$708.740</p>
-                        <button>Comprar</button>    
-                    </div>
-                </div>
-                <div class="card-producto">
-                    <img src="./img/auris8.png" alt="Imagen de gabinete">
-                    <p>Auricular Inalambrico Logitech G A50 X Blanco Lightspeed</p>
-                    <div class="detalle">
-                        <p class="precio">$708.740</p>
-                        <button>Comprar</button>    
-                    </div>
-                </div>
-                <div class="card-producto">
-                    <img src="./img/auris10.png" alt="Imagen de gabinete">
-                    <p>Auricular Inalambrico Logitech G735 Lighspeed RGB White</p>
-                    <div class="detalle">
-                        <p class="precio">$405.990</p>
-                        <button>Comprar</button>    
-                    </div>
-                </div>
+                
             </div>
           </section>
           <!-- Cuarta sección (contacto) -->
@@ -405,5 +170,7 @@
             
         </footer>
      </div>
+     <script src="data.js" defer></script>
+     <script src="main.js" defer></script>
 </body>
 </html>
