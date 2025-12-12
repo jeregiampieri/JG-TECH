@@ -292,6 +292,8 @@ const productosData = [
     }
 ]
 
+// Paginado de los productos
+
 // Fin del array de objetos
 
 // -----PRUEBAS PARA CONTROLAR QUE ESTE CORRECTAMENTE CARGADO------

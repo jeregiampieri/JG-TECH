@@ -244,12 +244,12 @@ header img{
 #productos{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
     justify-content: center;
     align-items: center;
     width: 100%;
     background-color: black;
-    padding: 30px 0px 0px 0px;
+    padding: 10px 0px 0px 0px;
     margin-bottom: 30px;
 }
 
@@ -308,6 +308,30 @@ header img{
     color: #ffffffd3;
     font-size: 80%;
     transition: all 0.5s ease;
+}
+
+.ver-mas-contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.boton-ver-mas{
+    border: 1px solid rgba(255, 255, 255, 0.701);
+    background-color: black;
+    padding: 8px 25px;
+    color: #ffffffd3;
+    border-radius: 5px;
+    font-size: 100%;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.boton-ver-mas:hover {
+    background-color: #ffffffe3;
+    border: 1px solid #131415;
+    color: #131415;
 }
 
 .titulo-categoria{
