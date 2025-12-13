@@ -34,13 +34,13 @@ const productosTemplate = (producto) => {
 }
 
 const verMasProductos = () => {
-    let index = appState.currentProductsIndex + 1
-    if (index > appState.cantMaxPage){
+    appState.currentProductsIndex += 1
+    if (appState.currentProductsIndex > appState.cantMaxPage){
         currentProductsIndex = appState.cantMaxPage
         renderProducts(appState.products[currentProductsIndex])
     }
-        renderProducts(appState.products[index])
-        appState.currentProductsIndex = index
+        renderProducts(appState.products[appState.currentProductsIndex])
+        
 }
 
 
