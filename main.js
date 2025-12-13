@@ -35,16 +35,11 @@ const productosTemplate = (producto) => {
 
 const verMasProductos = () => {
     appState.currentProductsIndex += 1
-    if (appState.currentProductsIndex > appState.cantMaxPage){
-        currentProductsIndex = appState.cantMaxPage
-        renderProducts(appState.products[currentProductsIndex])
-    }
+    if (appState.currentProductsIndex === appState.cantMaxPage - 1){
+        verMasBoton.classList.add("esconder")        
+    } 
         renderProducts(appState.products[appState.currentProductsIndex])
-        
 }
-
-
-
 
 // Función inicializadora, es la puerta de entrada de la aplicación, lo primero que se ejecuta en la misma, acá se coloca lo que quiero que se ejecute ni bien arranca la página
 const init = () => {

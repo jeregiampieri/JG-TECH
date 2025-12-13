@@ -339,6 +339,10 @@ header img{
     font-weight: 500;
 }
 
+.esconder{
+    visibility: hidden;
+}
+
 .productos-contenedor{
     display: flex;
     justify-content: center;
