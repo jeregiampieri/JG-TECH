@@ -33,9 +33,23 @@ const productosTemplate = (producto) => {
             </div>`;
 }
 
+const verMasProductos = () => {
+    let index = appState.currentProductsIndex + 1
+    if (index > appState.cantMaxPage){
+        currentProductsIndex = appState.cantMaxPage
+        renderProducts(appState.products[currentProductsIndex])
+    }
+        renderProducts(appState.products[index])
+        appState.currentProductsIndex = index
+}
+
+
+
+
 // Función inicializadora, es la puerta de entrada de la aplicación, lo primero que se ejecuta en la misma, acá se coloca lo que quiero que se ejecute ni bien arranca la página
 const init = () => {
     renderProducts(appState.products[0])
+    verMasBoton.addEventListener("click", verMasProductos)
 }
 
 init()
