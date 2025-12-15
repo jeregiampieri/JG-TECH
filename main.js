@@ -1,11 +1,17 @@
-// Tomo el contenedor de los productos
+// Contenedor de los productos
 const productsContainer = document.querySelector(".productos-contenedor") 
-// Tomo el boton ver más 
+// Boton ver más 
 const verMasBoton = document.querySelector(".boton-ver-mas")
-// Tomo el contenedor de los filtros
+// Contenedor de los filtros
 const filtrosContainer = document.querySelector(".filtros-contenedor")
-// Tomo los botones 
+// Botones de los filtros 
 const botones = document.querySelectorAll(".categorias")
+// Icono del carrito
+const iconoCarro = document.querySelector(".carrito-label")
+// Burbuja del carrito
+const bubbleCarrito = document.querySelector(".cart-bubble") 
+// Carrito de compras
+const carritoCompras = document.querySelector(".carrito-compras")
 
 // Primero que todo, necesito traer el localStorage por si han quedado productos almacenados en el browser del usuario
 // Como guardo los datos como 'cart' en el localStorage, entonces debo usar el mismo nombre para recuperarlos del localStorage
@@ -91,12 +97,22 @@ const aplicarFiltro = (click) => {
     renderProducts(appState.products[0])
 }
 
+const abrirMenuCarrito = (click) => {
+    // Lo uso para capturar el div, ya que tiene otras etiquetas dentro, entonces cuando se hace click, closest va subiendo entre los ancestros
+    // del elemento al que se le hizo click hasta encontrar aquel ancestro que cumpla con el (selector)
+    if (click.target.closest(".carrito-label")){
+        carritoCompras.classList.toggle("esconder")
+        return
+    }
+    return
+}
 
 // Función inicializadora, es la puerta de entrada de la aplicación, lo primero que se ejecuta en la misma, acá se coloca lo que quiero que se ejecute ni bien arranca la página
 const init = () => {
     renderProducts(appState.products[0])
     verMasBoton.addEventListener("click", verMasProductos)
     filtrosContainer.addEventListener("click", aplicarFiltro)
+    iconoCarro.addEventListener("click", abrirMenuCarrito)
 }
 
 init()
