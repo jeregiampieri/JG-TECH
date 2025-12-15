@@ -2,6 +2,10 @@
 const productsContainer = document.querySelector(".productos-contenedor") 
 // Tomo el boton ver más 
 const verMasBoton = document.querySelector(".boton-ver-mas")
+// Tomo el contenedor de los filtros
+const filtrosContainer = document.querySelector(".filtros-contenedor")
+// Tomo los botones 
+const botones = document.querySelectorAll(".categorias")
 
 // Primero que todo, necesito traer el localStorage por si han quedado productos almacenados en el browser del usuario
 // Como guardo los datos como 'cart' en el localStorage, entonces debo usar el mismo nombre para recuperarlos del localStorage
@@ -33,6 +37,7 @@ const productosTemplate = (producto) => {
             </div>`;
 }
 
+// Permite mostrar productos a medida que el usuario hace click en el botón ver más, y oculta dicho botón cuando llega al máximo de productos
 const verMasProductos = () => {
     appState.currentProductsIndex += 1
     if (appState.currentProductsIndex === appState.cantMaxPage - 1){
@@ -41,10 +46,57 @@ const verMasProductos = () => {
         renderProducts(appState.products[appState.currentProductsIndex])
 }
 
+// Permite manejar la visibilidad del botón ver más en base a si hay filtros activos o no
+const verMasVisibilidad = () => {
+    if (!appState.activeFilter){
+        verMasBoton.classList.remove("esconder")
+        return
+    }
+    verMasBoton.classList.add("esconder")
+}
+
+// Función para obtener el array de productos en base al filtro y renderizarlos
+const filtrarProductos = (filtro) => {
+    let productosFiltro = []
+    productosData.forEach((producto) => {
+        if (producto.categoria === filtro){
+            productosFiltro.push(producto)
+        }
+    })
+    renderProducts(productosFiltro)
+}
+
+// Función para aplicar los filtros
+const aplicarFiltro = (click) => {
+    const boton = click.target.closest(".categorias")
+    if (boton.classList.contains("activo")){
+        boton.classList.remove("activo")
+        productsContainer.innerHTML = ""
+        renderProducts(appState.products[0])
+        appState.activeFilter = null
+        verMasVisibilidad()
+        return
+    }
+    botones.forEach((btn) => btn.classList.remove("activo") )
+    appState.activeFilter = boton.dataset.categoria
+    boton.classList.add("activo")
+    productsContainer.innerHTML = ""
+    verMasVisibilidad()
+    if (appState.activeFilter){
+        verMasVisibilidad()
+        filtrarProductos(appState.activeFilter)
+        appState.currentProductsIndex = 0
+        return
+    }
+    renderProducts(appState.products[0])
+}
+
+
 // Función inicializadora, es la puerta de entrada de la aplicación, lo primero que se ejecuta en la misma, acá se coloca lo que quiero que se ejecute ni bien arranca la página
 const init = () => {
     renderProducts(appState.products[0])
     verMasBoton.addEventListener("click", verMasProductos)
+    filtrosContainer.addEventListener("click", aplicarFiltro)
 }
 
 init()
