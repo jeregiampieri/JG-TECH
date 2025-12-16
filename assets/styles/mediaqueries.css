@@ -51,12 +51,13 @@
         border-radius: 2px;
         /* Para ocultar el menu en el flujo del documento cuando no esta checked el menu hamburguesa */
         transform: translateX(150%);
-        transition: all 0.2s ease;
+        transition: all 0.3s cubic-bezier(0.92, 0.01, 0.35, 0.99);
+        z-index: 2;
     }
 
-    /* Básicamente estoy diciendo que si el input menu-toggle esta 'clickeado', entonces el elemento hermano inmediato va a tener dicha propiedad */
-    #menu-toggle:checked + .navbar-lista{
-        transform: translate(0%);
+    .abrir-menu{
+    transform: translateX(0%);
+    transition: all 0.3s cubic-bezier(0.92, 0.01, 0.35, 0.99);
     }
     /* Fin de los ajustes en el header */
     /* Comienzo de los ajustes en el hero */
@@ -204,12 +205,15 @@
         text-align: center;
         border-radius: 2px;
         transform: translateX(150%);
-        transition: all 0.2s ease;
+        transition: all 0.3s cubic-bezier(0.92, 0.01, 0.35, 0.99);
+        z-index: 2;
     }
 
-    #menu-toggle:checked + .navbar-lista{
-        transform: translate(0%);
+    .abrir-menu{
+    transform: translateX(0%);
+    transition: all 0.3s cubic-bezier(0.92, 0.01, 0.35, 0.99);
     }
+
     /* Fin de los ajustes en el header */
 
     /* Comienzo de ajustes en la seccion hero */
@@ -365,12 +369,15 @@
         text-align: center;
         border-radius: 2px;
         transform: translateX(150%);
-        transition: all 0.2s ease;
+        transition: all 0.3s cubic-bezier(0.92, 0.01, 0.35, 0.99);
+        z-index: 2;
     }
 
-    #menu-toggle:checked + .navbar-lista{
-        transform: translate(0%);
+    .abrir-menu{
+    transform: translateX(0%);
+    transition: all 0.3s cubic-bezier(0.92, 0.01, 0.35, 0.99);
     }
+
     /* Fin de los ajustes en el header */
 
     /* Comienzo de ajustes en la seccion hero */
@@ -520,13 +527,16 @@
         text-align: center;
         border-radius: 2px;
         transform: translateX(150%);
-        transition: all 0.2s ease;
+        transition: all 0.3s cubic-bezier(0.92, 0.01, 0.35, 0.99);
         padding: 1.1% 0px 1.1% 0px;
+        z-index: 2;
     }
 
-    #menu-toggle:checked + .navbar-lista{
-        transform: translate(0%);
+    .abrir-menu{
+    transform: translateX(0%);
+    transition: all 0.3s cubic-bezier(0.92, 0.01, 0.35, 0.99);
     }
+
     /* Fin de los ajustes en el header */
 
     /* Comienzo de ajustes en la seccion hero */

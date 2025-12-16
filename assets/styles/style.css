@@ -535,9 +535,9 @@ header img{
 .carrito-compras{
     display: flex;
     flex-direction: column;
-    position: absolute;
+    /* Recordar que el fixed te fija el elemento en el navegador */
+    position: fixed;
     width: 25%;
-    background-color: red;
     left: 75%;
     height: 100%;
     top: 70px;
@@ -546,6 +546,8 @@ header img{
     border-left: 1px solid rgb(52, 52, 52);
     gap: 30px;
     z-index: 2;
+    transition: all 0.3s cubic-bezier(0.92, 0.01, 0.35, 0.99);
+    transform: translateX(100%);
 }
 
 .carrito-compras-info{
@@ -737,13 +739,6 @@ footer{
 }
 /* Finalizacion de los ajustes en el footer */
 
-/* Menu hamburguesa, como estoy en PC no lo necesito, por lo tanto lo dejo oculto */
-#menu-toggle,
-.menu-label i{
-    display: none;
-    cursor: pointer;
-}
-
 .overlay{
     position: absolute;
     top: 70px;
@@ -762,6 +757,15 @@ footer{
 .esconder{
     display: none;
 }
+
+.abrir-carrito{
+    transform: translateX(0%);
+    transition: all 0.3s cubic-bezier(0.92, 0.01, 0.35, 0.99);
+}
+
+
+
+
 
 
 

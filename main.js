@@ -107,7 +107,7 @@ const abrirMenuCarrito = (click) => {
     // Lo uso para capturar el div, ya que tiene otras etiquetas dentro, entonces cuando se hace click, closest va subiendo entre los ancestros
     // del elemento al que se le hizo click hasta encontrar aquel ancestro que cumpla con el (selector)
     if (click.target.closest(".carrito-label")){
-        carritoCompras.classList.toggle("esconder")
+        carritoCompras.classList.toggle("abrir-carrito")
         overlay.classList.toggle("esconder")
         return
     }
@@ -115,8 +115,9 @@ const abrirMenuCarrito = (click) => {
 }
 
 const abrirMenu = (click) => {
-    if (click.target.classList.contains(".menu-label")){
-        navbarMenu.classList.toggle("esconder")
+    if (click.target.closest(".menu-label")){
+        navbarMenu.classList.toggle("abrir-menu")
+        overlay.classList.toggle("esconder")
         return
     }
     return
