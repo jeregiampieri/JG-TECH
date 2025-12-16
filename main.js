@@ -107,20 +107,24 @@ const abrirMenuCarrito = (click) => {
     // Lo uso para capturar el div, ya que tiene otras etiquetas dentro, entonces cuando se hace click, closest va subiendo entre los ancestros
     // del elemento al que se le hizo click hasta encontrar aquel ancestro que cumpla con el (selector)
     if (click.target.closest(".carrito-label")){
+        if (navbarMenu.classList.contains("abrir-menu")){
+            navbarMenu.classList.remove("abrir-menu")
+            overlay.classList.toggle("esconder")
+        }
         carritoCompras.classList.toggle("abrir-carrito")
         overlay.classList.toggle("esconder")
-        return
     }
-    return
 }
 
 const abrirMenu = (click) => {
     if (click.target.closest(".menu-label")){
+        if (carritoCompras.classList.contains("abrir-carrito")){
+            carritoCompras.classList.remove("abrir-carrito")
+            overlay.classList.toggle("esconder")
+        }
         navbarMenu.classList.toggle("abrir-menu")
         overlay.classList.toggle("esconder")
-        return
     }
-    return
 }
 
 // Función inicializadora, es la puerta de entrada de la aplicación, lo primero que se ejecuta en la misma, acá se coloca lo que quiero que se ejecute ni bien arranca la página
