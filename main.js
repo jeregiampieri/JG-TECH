@@ -20,6 +20,12 @@ const navbarMenu = document.querySelector(".navbar-lista")
 const overlay = document.querySelector(".overlay")
 // Productos dentro del carrito
 const carritoProductos = document.querySelector(".carrito-contenedor-productos")
+// Total del carrito
+const totalCarrito = document.querySelector(".carrito-total")
+// Botón comprar del carrito
+const botonComprarCarrito = document.querySelector(".boton-comprar")
+// Botón vaciar del carrito
+const botonVaciarCarrito = document.querySelector(".boton-vaciar")
 
 // Primero que todo, necesito traer el localStorage por si han quedado productos almacenados en el browser del usuario
 // Como guardo los datos como 'cart' en el localStorage, entonces debo usar el mismo nombre para recuperarlos del localStorage
@@ -159,6 +165,7 @@ const cerrarClickOverlay = () => {
     overlay.classList.add("esconder")
 }
 
+// Función para renderizar el carrito
 const renderCarrito = () => {
     if (carrito.length === 0){
         carritoProductos.innerHTML = `
@@ -168,20 +175,56 @@ const renderCarrito = () => {
     }
         carritoProductos.innerHTML = carrito.map((producto) => 
         productosTemplateCarrito(producto).join(""))
-
 }
 
+// Función para actualizar el total del carrito
+const actualizarTotal = () => {
+    if (!carrito.length) {
+        totalCarrito.innerHTML = 0
+        return
+    } 
+    const total = carrito.reduce((acumulador, producto) => {
+        // El return es necesario, ya que ese acumulador que retorna la función es el parámetro acumulador que va a utilizar para la próxima 
+        // iteración
+        return acumulador += Number(producto.precio) * producto.cantidad
+    }, 0)
+
+    totalCarrito.innerHTML = total.toFixed(2)
+}
+
+// Función para armar la estructura de los productos que se agregan en el carrito
 const productosTemplateCarrito = (producto) => {
+    // Tengo que capturar el id en los botones para mantener la persistencia, disminuir e incrementar la cantidad del producto
     let {id, name, precio, cardImg, cantidad} = producto
     return `
         <div class= "carrito-contenedor-producto">
             <img src=${cardImg} alt="${name}">
             <div class= "carrito-contenedor-producto-info>
-                <p>${name}</p>
+                <h2 class= "carrito-contenedor-producto-titulo>${name}</h2>
+                <p class= "carrito-contenedor-producto-precio>${precio}</p>
             </div>
-
+            <div class= "carrito-cotenedor-producto-botones>
+                <span class= "disminuir" data-id=${id}>-</span>
+                <span class= "cantidad">${cantidad}</span>
+                <span class= "aumentar" data-id=${id}>+</span>
+            </div>
         </div>
         `
+}
+
+// Función para actualizar la burbuja del carrito
+const actualizarBurbujaCarrito = () => {
+    bubbleCarrito.innerHTML = carrito.reduce((acumulador, producto) => {
+        acumulador += producto.cantidad
+    }, 0)
+}
+
+const estadoBoton = (boton) => {
+    if (!carrito.length){
+        boton.classList.add("deshabilitar")
+        return
+    }
+    boton.classList.remove("deshabilitar")   
 }
 
 // Función inicializadora, es la puerta de entrada de la aplicación, lo primero que se ejecuta en la misma, acá se coloca lo que quiero que se ejecute ni bien arranca la página
@@ -194,10 +237,14 @@ const init = () => {
     window.addEventListener("scroll", cerrarScroll)
     navbarMenu.addEventListener("click", cerrarClick)
     overlay.addEventListener("click", cerrarClickOverlay)
+    // MUY IMPORTANTE estos dos addEventListener al document, es necesario renderizar el carrito y actualizar el total APENAS se cargue el dom
+    // Apenas se carga el DOM en el documento, se ejecuta la función de renderizar el carrito
     document.addEventListener("DOMContentLoaded", renderCarrito)
-    
-
+    // Lo hago para que me muestre el total del carrito ni bien arranque la aplicación y tome los datos que vienen del localStorage
+    document.addEventListener("DOMContentLoaded", actualizarTotal)
+    actualizarBurbujaCarrito()
+    estadoBoton(botonComprarCarrito)
+    estadoBoton(botonVaciarCarrito)
 }
 
 init()
-console.log(carritoProductos)
