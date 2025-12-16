@@ -140,6 +140,23 @@ const cerrarScroll = () => {
     overlay.classList.toggle("esconder")
 }
 
+// Función para cerrar el menú responsive cuando se hace un click donde no hay scroll
+const cerrarClick = (click) => {
+    if (click.target.classList.contains("menu-opciones")){
+        if (navbarMenu.classList.contains("abrir-menu")){
+            navbarMenu.classList.remove("abrir-menu")
+            overlay.classList.toggle("esconder")
+        }
+    }
+}
+
+// Función para cerrar carrito de compras y/o menú responsive al hacer click en el overlay
+const cerrarClickOverlay = () => {
+    navbarMenu.classList.remove("abrir-menu")
+    carritoCompras.classList.remove("abrir-carrito")
+    overlay.classList.add("esconder")
+}
+
 // Función inicializadora, es la puerta de entrada de la aplicación, lo primero que se ejecuta en la misma, acá se coloca lo que quiero que se ejecute ni bien arranca la página
 const init = () => {
     renderProducts(appState.products[0])
@@ -148,6 +165,9 @@ const init = () => {
     iconoCarro.addEventListener("click", abrirMenuCarrito)
     iconoMenu.addEventListener("click", abrirMenu)
     window.addEventListener("scroll", cerrarScroll)
+    navbarMenu.addEventListener("click", cerrarClick)
+    overlay.addEventListener("click", cerrarClickOverlay)
+
 }
 
 init()
