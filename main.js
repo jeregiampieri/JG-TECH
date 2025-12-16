@@ -12,6 +12,12 @@ const iconoCarro = document.querySelector(".carrito-label")
 const bubbleCarrito = document.querySelector(".cart-bubble") 
 // Carrito de compras
 const carritoCompras = document.querySelector(".carrito-compras")
+// Icono del menú (para resoluciones más pequeñas)
+const iconoMenu = document.querySelector(".menu-label")
+// Navbar del menú 
+const navbarMenu = document.querySelector(".navbar-lista")
+// Overlay
+const overlay = document.querySelector(".overlay")
 
 // Primero que todo, necesito traer el localStorage por si han quedado productos almacenados en el browser del usuario
 // Como guardo los datos como 'cart' en el localStorage, entonces debo usar el mismo nombre para recuperarlos del localStorage
@@ -102,6 +108,15 @@ const abrirMenuCarrito = (click) => {
     // del elemento al que se le hizo click hasta encontrar aquel ancestro que cumpla con el (selector)
     if (click.target.closest(".carrito-label")){
         carritoCompras.classList.toggle("esconder")
+        overlay.classList.toggle("esconder")
+        return
+    }
+    return
+}
+
+const abrirMenu = (click) => {
+    if (click.target.classList.contains(".menu-label")){
+        navbarMenu.classList.toggle("esconder")
         return
     }
     return
@@ -113,6 +128,7 @@ const init = () => {
     verMasBoton.addEventListener("click", verMasProductos)
     filtrosContainer.addEventListener("click", aplicarFiltro)
     iconoCarro.addEventListener("click", abrirMenuCarrito)
+    iconoMenu.addEventListener("click", abrirMenu)
 }
 
 init()
