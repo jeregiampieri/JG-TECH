@@ -557,6 +557,18 @@ header img{
     color: #ffffffe3;
 }
 
+.carrito-contenedor-productos{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.carrito-contenedor-productos p{
+    color: #afa9a9
+}
+
 .carrito-compras-info h2{
     font-weight: 600;
 }

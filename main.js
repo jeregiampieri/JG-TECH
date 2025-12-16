@@ -18,6 +18,8 @@ const iconoMenu = document.querySelector(".menu-label")
 const navbarMenu = document.querySelector(".navbar-lista")
 // Overlay
 const overlay = document.querySelector(".overlay")
+// Productos dentro del carrito
+const carritoProductos = document.querySelector(".carrito-contenedor-productos")
 
 // Primero que todo, necesito traer el localStorage por si han quedado productos almacenados en el browser del usuario
 // Como guardo los datos como 'cart' en el localStorage, entonces debo usar el mismo nombre para recuperarlos del localStorage
@@ -157,6 +159,31 @@ const cerrarClickOverlay = () => {
     overlay.classList.add("esconder")
 }
 
+const renderCarrito = () => {
+    if (carrito.length === 0){
+        carritoProductos.innerHTML = `
+        <p>No hay productos en el carrito</p>
+        `
+        return
+    }
+        carritoProductos.innerHTML = carrito.map((producto) => 
+        productosTemplateCarrito(producto).join(""))
+
+}
+
+const productosTemplateCarrito = (producto) => {
+    let {id, name, precio, cardImg, cantidad} = producto
+    return `
+        <div class= "carrito-contenedor-producto">
+            <img src=${cardImg} alt="${name}">
+            <div class= "carrito-contenedor-producto-info>
+                <p>${name}</p>
+            </div>
+
+        </div>
+        `
+}
+
 // Función inicializadora, es la puerta de entrada de la aplicación, lo primero que se ejecuta en la misma, acá se coloca lo que quiero que se ejecute ni bien arranca la página
 const init = () => {
     renderProducts(appState.products[0])
@@ -167,7 +194,10 @@ const init = () => {
     window.addEventListener("scroll", cerrarScroll)
     navbarMenu.addEventListener("click", cerrarClick)
     overlay.addEventListener("click", cerrarClickOverlay)
+    document.addEventListener("DOMContentLoaded", renderCarrito)
+    
 
 }
 
 init()
+console.log(carritoProductos)
