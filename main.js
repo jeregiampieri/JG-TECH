@@ -48,8 +48,9 @@ const productosTemplate = (producto) => {
                 <p>${name}</p>
                 <div class="detalle">
                     <p class="precio">${precio}</p>
-                    <button
+                    <button class= "comprar-producto"
                     data-id= '${id}'
+                    data-img= '${cardImg}'
                     data-name= '${name}'
                     data-precio= '${precio}'
                     data-categoria= '${categoria}'>Comprar</button> 
@@ -195,7 +196,7 @@ const actualizarTotal = () => {
 // Función para armar la estructura de los productos que se agregan en el carrito
 const productosTemplateCarrito = (producto) => {
     // Tengo que capturar el id en los botones para mantener la persistencia, disminuir e incrementar la cantidad del producto
-    let {id, name, precio, cardImg, cantidad} = producto
+    const {id, name, precio, cardImg, cantidad} = producto
     return `
         <div class= "carrito-contenedor-producto">
             <img src=${cardImg} alt="${name}">
@@ -219,6 +220,7 @@ const actualizarBurbujaCarrito = () => {
     }, 0)
 }
 
+// Función para actualizar los botones del carrito
 const estadoBoton = (boton) => {
     if (!carrito.length){
         boton.classList.add("deshabilitar")
@@ -226,6 +228,59 @@ const estadoBoton = (boton) => {
     }
     boton.classList.remove("deshabilitar")   
 }
+
+// Función para actualizar el estado del carrito
+const actualizarCarrito = () => {
+    guardarCarrito();
+    renderCarrito();
+    actualizarTotal();
+    actualizarBurbujaCarrito();
+    estadoBoton(botonComprarCarrito);
+    estadoBoton(botonVaciarCarrito);
+}
+
+const agregarProducto = (click) => {
+    const boton = click.target.classList.contains("comprar-producto")
+    if (!boton){
+        return
+    }
+    const productoSeleccionado = crearDataProducto(click.target.dataset)
+    if (!existeProductoCarrito(productoSeleccionado.id).length){
+        crearCartProducto(productoSeleccionado) //Estoy agregando el producto al carrito, y de paso se le agrega el atributo cantidad
+        // Mostramos modal
+    } else{
+        agregarUnidadProducto(productoSeleccionado)
+        // Mostramos modal
+    }
+    renderCarrito()
+}
+
+// Función para crear la data del producto
+const crearDataProducto = (producto) => {
+    const {id, name, precio, cardImg} = producto
+    return {id, name, precio, cardImg}
+}
+
+// Función para agregar una unidad de un producto que ya existe
+const agregarUnidadProducto = (producto) => {
+    carrito.forEach((item) => {
+        if (item.id === producto.id){
+            item.cantidad += 1
+        }
+    })
+}
+
+const crearCartProducto = (producto) => {
+    carrito = [...carrito, {...producto, cantidad: 1}]
+}
+
+// Función para comprobar si en el carrito existen productos en base al id del producto
+const existeProductoCarrito = (id) => {
+    return carrito.filter((producto) => {
+        return producto.id === id
+    })
+}
+
 
 // Función inicializadora, es la puerta de entrada de la aplicación, lo primero que se ejecuta en la misma, acá se coloca lo que quiero que se ejecute ni bien arranca la página
 const init = () => {
@@ -242,9 +297,11 @@ const init = () => {
     document.addEventListener("DOMContentLoaded", renderCarrito)
     // Lo hago para que me muestre el total del carrito ni bien arranque la aplicación y tome los datos que vienen del localStorage
     document.addEventListener("DOMContentLoaded", actualizarTotal)
+    productsContainer.addEventListener("click", agregarProducto)
     actualizarBurbujaCarrito()
     estadoBoton(botonComprarCarrito)
     estadoBoton(botonVaciarCarrito)
+
 }
 
 init()
