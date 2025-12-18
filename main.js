@@ -26,6 +26,8 @@ const totalCarrito = document.querySelector(".carrito-total")
 const botonComprarCarrito = document.querySelector(".boton-comprar")
 // Botón vaciar del carrito
 const botonVaciarCarrito = document.querySelector(".boton-vaciar")
+// Contenedor del modal
+const modal = document.querySelector(".agregar-modal")
 
 // Primero que todo, necesito traer el localStorage por si han quedado productos almacenados en el browser del usuario
 // Como guardo los datos como 'cart' en el localStorage, entonces debo usar el mismo nombre para recuperarlos del localStorage
@@ -239,6 +241,7 @@ const actualizarCarrito = () => {
     estadoBoton(botonVaciarCarrito);
 }
 
+// Función para agregar productos al carrito de compras
 const agregarProducto = (click) => {
     const boton = click.target.classList.contains("comprar-producto")
     if (!boton){
@@ -247,10 +250,10 @@ const agregarProducto = (click) => {
     const productoSeleccionado = crearDataProducto(click.target.dataset)
     if (!existeProductoCarrito(productoSeleccionado.id).length){
         crearCartProducto(productoSeleccionado) //Estoy agregando el producto al carrito, y de paso se le agrega el atributo cantidad
-        // Mostramos modal
+        mensajeModal("Se agregó el producto exitosamente")
     } else{
-        agregarUnidadProducto(productoSeleccionado)
-        // Mostramos modal
+        agregarUnidadProducto(productoSeleccionado) 
+        mensajeModal("Se agregó una unidad con éxito")
     }
     renderCarrito()
 }
@@ -281,6 +284,17 @@ const existeProductoCarrito = (id) => {
     })
 }
 
+// Función para mostrar el mensaje del modal al usuario
+const mensajeModal = (mensaje) => {
+    modal.classList.remove("esconder")
+    modal.innerHTML =  
+    `<p>
+        ${mensaje}
+    </p>`
+    setTimeout(() => {
+        modal.classList.add("esconder")
+    }, 1500)
+}
 
 // Función inicializadora, es la puerta de entrada de la aplicación, lo primero que se ejecuta en la misma, acá se coloca lo que quiero que se ejecute ni bien arranca la página
 const init = () => {
