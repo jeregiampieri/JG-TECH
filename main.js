@@ -18,7 +18,7 @@ const iconoMenu = document.querySelector(".menu-label")
 const navbarMenu = document.querySelector(".navbar-lista")
 // Overlay
 const overlay = document.querySelector(".overlay")
-// Productos dentro del carrito
+// Contenedor del carrito
 const carritoProductos = document.querySelector(".carrito-contenedor-productos")
 // Total del carrito
 const totalCarrito = document.querySelector(".carrito-total")
@@ -28,6 +28,10 @@ const botonComprarCarrito = document.querySelector(".boton-comprar")
 const botonVaciarCarrito = document.querySelector(".boton-vaciar")
 // Contenedor del modal
 const modal = document.querySelector(".agregar-modal")
+// Producto del carrito
+const productoDelCarrito = document.querySelector(".carrito-contenedor-producto")
+
+
 
 // Primero que todo, necesito traer el localStorage por si han quedado productos almacenados en el browser del usuario
 // Como guardo los datos como 'cart' en el localStorage, entonces debo usar el mismo nombre para recuperarlos del localStorage
@@ -248,7 +252,6 @@ const agregarProducto = (click) => {
         return
     }
     const productoSeleccionado = crearDataProducto(click.target.dataset)
-    console.log(productoSeleccionado)
     if (!existeProductoCarrito(productoSeleccionado.id).length){
         crearCartProducto(productoSeleccionado) //Estoy agregando el producto al carrito, y de paso se le agrega el atributo cantidad
         mensajeModal("Se agregó el producto exitosamente al carrito")
@@ -288,15 +291,42 @@ const existeProductoCarrito = (id) => {
 
 // Función para mostrar el mensaje del modal al usuario
 const mensajeModal = (mensaje) => {
-    modal.classList.remove("esconder")
+    modal.classList.remove("esconder-modal")
     modal.innerHTML =  
     `<p>
         ${mensaje}
     </p>`
     setTimeout(() => {
-        modal.classList.add("esconder")
-    }, 1500)
+        modal.classList.add("esconder-modal")
+    }, 1000)
 }
+
+// Función para aumentar la cantidad del producto desde el carrito
+const modificarCantidadProducto = (click) => {
+    const id = click.target.dataset.id
+    carrito.forEach((producto) => {
+        if (producto.id === id){
+            if (click.target.classList.contains("aumentar")){
+                producto.cantidad += 1
+                actualizarCarrito()
+                mensajeModal("Se agregó una unidad con éxito al carrito")
+
+            }else if (click.target.classList.contains("disminuir")){
+                if (producto.cantidad >= 2){
+                    producto.cantidad -= 1
+                    actualizarCarrito()
+                    mensajeModal("Se quitó una unidad con éxito del carrito")
+                    }
+                else if (producto.cantidad === 1){
+                    mensajeModal("a")
+                }
+                }
+            } 
+        }
+    )
+}
+
+
 
 // Función inicializadora, es la puerta de entrada de la aplicación, lo primero que se ejecuta en la misma, acá se coloca lo que quiero que se ejecute ni bien arranca la página
 const init = () => {
@@ -314,6 +344,7 @@ const init = () => {
     // Lo hago para que me muestre el total del carrito ni bien arranque la aplicación y tome los datos que vienen del localStorage
     document.addEventListener("DOMContentLoaded", actualizarTotal)
     productsContainer.addEventListener("click", agregarProducto)
+    carritoProductos.addEventListener("click", modificarCantidadProducto)
     actualizarBurbujaCarrito()
     estadoBoton(botonComprarCarrito)
     estadoBoton(botonVaciarCarrito)
@@ -321,3 +352,4 @@ const init = () => {
 }
 
 init()
+
