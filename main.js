@@ -342,13 +342,16 @@ const accionProductoCarrito = (click) => {
             carrito = []
             actualizarCarrito()
         }
+        return
     } 
     else if (click.target.classList.contains("boton-vaciar") && carrito.length){
         if (window.confirm("¿Está seguro que desea vaciar el carrito?")){
             carrito = []
             actualizarCarrito()
         }
+        return
     }
+    return
 } 
 
 // Función inicializadora, es la puerta de entrada de la aplicación, lo primero que se ejecuta en la misma, acá se coloca lo que quiero que se ejecute ni bien arranca la página
