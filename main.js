@@ -314,19 +314,26 @@ const modificarCantidadProducto = (click) => {
             }else if (click.target.classList.contains("disminuir")){
                 if (producto.cantidad >= 2){
                     producto.cantidad -= 1
-                    actualizarCarrito()
                     mensajeModal("Se quitó una unidad con éxito del carrito")
                     }
                 else if (producto.cantidad === 1){
-                    mensajeModal("a")
+                    if(window.confirm("¿Desea eliminar el producto del carrito?")){
+                        eliminarProductoCart(producto)
+                    }
                 }
-                }
-            } 
-        }
-    )
+                actualizarCarrito()
+            }
+        } 
+    })
+    console.log(carrito)
 }
 
-
+// Función para eliminar productos del carrito desde sus cards
+const eliminarProductoCart = (producto) => {
+    carrito = carrito.filter((item) => {
+        return item.id !== producto.id
+    })
+}
 
 // Función inicializadora, es la puerta de entrada de la aplicación, lo primero que se ejecuta en la misma, acá se coloca lo que quiero que se ejecute ni bien arranca la página
 const init = () => {
