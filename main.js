@@ -46,10 +46,10 @@ const renderProducts = (listaProductos) =>{
 const productosTemplate = (producto) => {
     const {id, name, precio, categoria, cardImg} = producto //Desestructuracion del producto que llega por parámetro, esto permite ahorrar tiempo
     return `<div class="card-producto"> 
-                <img src=${cardImg} alt="Imagen de gabinete">
+                <img src=${cardImg} alt=""/>
                 <p>${name}</p>
                 <div class="detalle">
-                    <p class="precio">${precio}</p>
+                    <p class="precio">$${precio}</p>
                     <button class= "comprar-producto"
                     data-id= '${id}'
                     data-img= '${cardImg}'
@@ -142,7 +142,7 @@ const abrirMenu = (click) => {
 
 // Función para cerrar carrito de compras y/o menu responsive con scroll
 const cerrarScroll = () => {
-    if (!carritoCompras.classList.contains("abrir-carrito") && 
+    if (!carritoCompras.classList.contains("abrir-carrito") || 
         !navbarMenu.classList.contains("abrir-menu")){
         return
     }
@@ -176,8 +176,8 @@ const renderCarrito = () => {
         `
         return
     }
-        carritoProductos.innerHTML = carrito.map((producto) => 
-        productosTemplateCarrito(producto).join(""))
+        carritoProductos.innerHTML = carrito.map(producto => 
+        productosTemplateCarrito(producto)).join("")
 }
 
 // Función para actualizar el total del carrito
@@ -198,15 +198,15 @@ const actualizarTotal = () => {
 // Función para armar la estructura de los productos que se agregan en el carrito
 const productosTemplateCarrito = (producto) => {
     // Tengo que capturar el id en los botones para mantener la persistencia, disminuir e incrementar la cantidad del producto
-    const {id, name, precio, cardImg, cantidad} = producto
+    const {id, name, precio, img, cantidad} = producto
     return `
-        <div class= "carrito-contenedor-producto">
-            <img src=${cardImg} alt="${name}">
-            <div class= "carrito-contenedor-producto-info>
-                <h2 class= "carrito-contenedor-producto-titulo>${name}</h2>
-                <p class= "carrito-contenedor-producto-precio>${precio}</p>
+        <div class="carrito-contenedor-producto">
+            <img src=${img} alt=""/>
+            <div class="carrito-contenedor-producto-info">
+                <h2 class="carrito-contenedor-producto-titulo">${name}</h2>
+                <p class="carrito-contenedor-producto-precio">$${precio}</p>
             </div>
-            <div class= "carrito-cotenedor-producto-botones>
+            <div class= "carrito-cotenedor-producto-botones">
                 <span class= "disminuir" data-id=${id}>-</span>
                 <span class= "cantidad">${cantidad}</span>
                 <span class= "aumentar" data-id=${id}>+</span>
@@ -218,7 +218,7 @@ const productosTemplateCarrito = (producto) => {
 // Función para actualizar la burbuja del carrito
 const actualizarBurbujaCarrito = () => {
     bubbleCarrito.innerHTML = carrito.reduce((acumulador, producto) => {
-        acumulador += producto.cantidad
+        return acumulador += producto.cantidad
     }, 0)
 }
 
@@ -248,20 +248,22 @@ const agregarProducto = (click) => {
         return
     }
     const productoSeleccionado = crearDataProducto(click.target.dataset)
+    console.log(productoSeleccionado)
     if (!existeProductoCarrito(productoSeleccionado.id).length){
         crearCartProducto(productoSeleccionado) //Estoy agregando el producto al carrito, y de paso se le agrega el atributo cantidad
-        mensajeModal("Se agregó el producto exitosamente")
+        mensajeModal("Se agregó el producto exitosamente al carrito")
     } else{
         agregarUnidadProducto(productoSeleccionado) 
-        mensajeModal("Se agregó una unidad con éxito")
+        mensajeModal("Se agregó una unidad con éxito al carrito")
     }
-    renderCarrito()
+    // Como los métodos de arriba (crearCartProducto y agregarUnidadProducto) manipulan al carrito entonces es necesario actualizarlo
+    actualizarCarrito()
 }
 
 // Función para crear la data del producto
 const crearDataProducto = (producto) => {
-    const {id, name, precio, cardImg} = producto
-    return {id, name, precio, cardImg}
+    const {id, img, name, precio} = producto
+    return {id, img, name, precio}
 }
 
 // Función para agregar una unidad de un producto que ya existe
@@ -315,7 +317,7 @@ const init = () => {
     actualizarBurbujaCarrito()
     estadoBoton(botonComprarCarrito)
     estadoBoton(botonVaciarCarrito)
-
+    localStorage.removeItem("cart")
 }
 
 init()

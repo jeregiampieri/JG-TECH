@@ -537,8 +537,8 @@ header img{
     flex-direction: column;
     /* Recordar que el fixed te fija el elemento en el navegador */
     position: fixed;
-    width: 25%;
-    left: 75%;
+    width: 32%;
+    left: 68%;
     height: 100%;
     top: 70px;
     padding: 30px;
@@ -548,6 +548,7 @@ header img{
     z-index: 2;
     transition: all 0.3s cubic-bezier(0.92, 0.01, 0.35, 0.99);
     transform: translateX(100%);
+    overflow: scroll;
 }
 
 .carrito-compras-info{
@@ -559,20 +560,77 @@ header img{
 
 .carrito-contenedor-productos{
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    width: 100%;
+    width: auto;
     height: auto;
-    gap: 15px;
+    gap: 25px;
 }
 
-.carrito-contenedor-productos p{
-    color: #afa9a9
+/* Estilos para cada producto dentro del carrito */
+.carrito-contenedor-producto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    background-color: black;
+    border: 1px solid rgb(219, 219, 219);
+    padding: 20px;
+    gap: 30px;
 }
 
-.carrito-compras-info h2{
-    font-weight: 600;
+.carrito-contenedor-producto img{
+    width: 100px;
+    height: 100px;
 }
+
+.carrito-contenedor-producto-info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.carrito-contenedor-producto-info h2{
+    font-size: 1rem;
+}
+
+.carrito-contenedor-producto-info p{
+    font-size: 1rem;
+}
+
+.carrito-cotenedor-producto-botones{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.disminuir{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: auto;
+    border: 1px solid rgb(69, 69, 69);
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.aumentar{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: auto;
+    border: 1px solid rgb(69, 69, 69);
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
 
 .linea-separadora-carrito{
     width: 100%;
@@ -789,14 +847,15 @@ footer{
 }
 
 .agregar-modal{
-    width: auto;
-    background-color: black;
-    border: 1px solid rgb(52, 52, 52);
+    width: 100vw;
+    background-color: rgb(0, 177, 77);
     padding: 10px;
     position: fixed;
     bottom: 0px;
-    left: 45%;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .esconder{
