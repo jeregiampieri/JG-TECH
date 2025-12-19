@@ -325,7 +325,6 @@ const modificarCantidadProducto = (click) => {
             }
         } 
     })
-    console.log(carrito)
 }
 
 // Función para eliminar productos del carrito desde sus cards
@@ -334,6 +333,23 @@ const eliminarProductoCart = (producto) => {
         return item.id !== producto.id
     })
 }
+
+// Función para la compra del producto del carrito
+const accionProductoCarrito = (click) => {
+    if (click.target.classList.contains("boton-comprar") && carrito.length){
+        if (window.confirm("¿Desea comprar estos productos?")){
+            window.alert("¡La compra se realizo con éxito! ¡Muchisímas gracias!")
+            carrito = []
+            actualizarCarrito()
+        }
+    } 
+    else if (click.target.classList.contains("boton-vaciar") && carrito.length){
+        if (window.confirm("¿Está seguro que desea vaciar el carrito?")){
+            carrito = []
+            actualizarCarrito()
+        }
+    }
+} 
 
 // Función inicializadora, es la puerta de entrada de la aplicación, lo primero que se ejecuta en la misma, acá se coloca lo que quiero que se ejecute ni bien arranca la página
 const init = () => {
@@ -352,6 +368,7 @@ const init = () => {
     document.addEventListener("DOMContentLoaded", actualizarTotal)
     productsContainer.addEventListener("click", agregarProducto)
     carritoProductos.addEventListener("click", modificarCantidadProducto)
+    carritoCompras.addEventListener("click", accionProductoCarrito)
     actualizarBurbujaCarrito()
     estadoBoton(botonComprarCarrito)
     estadoBoton(botonVaciarCarrito)
