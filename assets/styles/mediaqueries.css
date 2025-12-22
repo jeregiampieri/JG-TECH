@@ -153,6 +153,37 @@
 
     /* Fin de los ajustes en la sección productos */
 
+    /* Comienzo de los ajustes en el carrito */
+
+    .carrito-compras{
+        width: 42%;
+        left: 58%;
+    }
+
+    .carrito-contenedor-producto img{
+    width: 30%;
+    height: 80%;
+}
+
+    .carrito-contenedor-producto{
+        width: 100%;
+        gap: 10%;
+    }
+
+    .carrito-contenedor-producto-info{
+        width: 50%;
+    }
+    
+    .carrito-contenedor-producto-info h2{
+        font-size: 0.91rem;
+    }
+
+    .carrito-contenedor-producto-info p{
+    font-size: 0.91rem;
+}
+
+    /* Fin de los ajustes en el carrito */
+
     /* Comienzo de los ajustes en la sección contacto */
     #contacto h1{
         font-size: 1.4rem;
