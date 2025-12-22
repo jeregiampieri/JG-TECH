@@ -109,29 +109,20 @@
 
     /* Comienzo de los ajustes en los filtros */
     .filtros-contenedor{
-        width: 200px;
-        gap: 0px;
+        width: 80%;
+        gap: 35px;
     }
 
     .categorias{
         padding: 5px 10px;
-        font-size: 1.09rem;
+        font-size: 1rem;
     }
     /* Fin de los ajustes en los filtros */
 
-
-    /* Comienzo de los ajustes en el carrito de productos */
-    .carrito-compras{
-        left: 0%;
-        display: none;
-
-    }
-    /* Fin de los ajustes en el carrito de productos */
-
-
     /* Comienzo de los ajustes en la seccion producto */
+
     #productos h1{
-        font-size: 1.4rem;
+        font-size: 1.7rem;
     }
 
     .teclado{
@@ -139,13 +130,12 @@
     }
 
     .productos-contenedor{
-         display: flex;
+        display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
-        width: 70%;
+        width: 100%;
         flex-wrap: wrap;
-        background-color: red;
     }
 
     .card-producto{
