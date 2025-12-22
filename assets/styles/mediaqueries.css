@@ -1,6 +1,10 @@
 @media (min-width: 992px) and (max-width:1246px){
 
     /* Ajustes en todo lo relacionado con el header */
+    header{
+        width: 100vw;
+    }
+
     header img{
         width: 200px;
     }
@@ -22,15 +26,15 @@
 
     .navbar{
         gap: 35px;
+        width: 10%;
     }
 
     /* Los elementos del navbar ya se me hacen muy grandes, por lo que es mejor usar el menú hamburguesa */
     .navbar-lista{
         position: absolute;
         top: 70px;
-        width: 90%;
-        left: 5%;
-        right: 5%;
+        width: 80%;
+        left: 10%;
         flex-direction: column;
         gap: 30px;
         justify-content: center;
@@ -102,6 +106,29 @@
     }
     /* Fin de los ajustes en la seccion nosotros */
 
+
+    /* Comienzo de los ajustes en los filtros */
+    .filtros-contenedor{
+        width: 200px;
+        gap: 0px;
+    }
+
+    .categorias{
+        padding: 5px 10px;
+        font-size: 1.09rem;
+    }
+    /* Fin de los ajustes en los filtros */
+
+
+    /* Comienzo de los ajustes en el carrito de productos */
+    .carrito-compras{
+        left: 0%;
+        display: none;
+
+    }
+    /* Fin de los ajustes en el carrito de productos */
+
+
     /* Comienzo de los ajustes en la seccion producto */
     #productos h1{
         font-size: 1.4rem;
@@ -109,6 +136,16 @@
 
     .teclado{
         font-size: 150%;
+    }
+
+    .productos-contenedor{
+         display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 70%;
+        flex-wrap: wrap;
+        background-color: red;
     }
 
     .card-producto{
@@ -138,7 +175,7 @@
 
     /* Comienzo de los ajustes en el footer */
     .footer-contacto{
-        width: 50%;
+        width: 30%;
     }
 
     .footer-contacto p{
@@ -193,9 +230,8 @@
     .navbar-lista{
         position: absolute;
         top: 70px;
-        width: 90%;
-        left: 5%;
-        right: 5%;
+        width: 50%;
+        left: -10%;
         flex-direction: column;
         gap: 30px;
         justify-content: center;
@@ -209,7 +245,7 @@
         border-top: none;
         text-align: center;
         border-radius: 2px;
-        transform: translateX(150%);
+        transform: translateX(0%);
         transition: all 0.3s cubic-bezier(0.92, 0.01, 0.35, 0.99);
         padding: 1.1% 0px 1.1% 0px;
         z-index: 2;
