@@ -366,12 +366,12 @@
     }
 
     .card-producto p{
-        font-size: 1rem;
+        font-size: 0.95rem;
         width: 65%;
     }
 
     .detalle button{
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
     /* Fin de los ajustes en productos */
 
@@ -518,7 +518,7 @@
     }
 
     .hero-info h1{
-        font-size: 5rem;
+        font-size: 4.8rem;
     }
 
     .hero-info p{
@@ -543,9 +543,51 @@
         font-size: 150%;
     }
     /* Fin de los ajustes en la sección nosotros */
+
+    /* Comienzo de los ajustes en el filtro */
+    .filtros-contenedor{
+        width: 100%;
+        gap: 10px;
+    }
+
+    .categorias{
+        padding: 5px 8px;
+        font-size: 0.75rem;
+    }
+    /* Fin de los ajustes en el filtro */
+
+    /* Comienzo de los ajustes en el carrito de compras */
+    .carrito-compras{
+        width: 70%;
+        left: 30%;
+    }
+
+    .carrito-contenedor-producto img{
+        width: 100px;
+        height: 110px;
+    }
+
+    .carrito-contenedor-producto{
+        width: 100%;
+    }
+
+    .carrito-contenedor-producto-info{
+        width: 70%;
+    }
+
+    .carrito-contenedor-producto-info h2{
+        font-size: 0.88rem;
+    }
+
+    .carrito-contenedor-producto-info p{
+        font-size: 0.95rem;
+    }
+    /* Fin de los ajustes en el carrito de compras */
+
+
     /* Comienzo de los ajustes en productos */
     #productos h1{
-        font-size: 1.4;
+        font-size: 1.4rem;
     }
 
     .teclado{
@@ -553,7 +595,7 @@
     }
 
     .card-producto{
-        height: 350px;
+        height: 325px;
         width: 50%;
     }
 
@@ -563,12 +605,16 @@
     }
 
     .card-producto p{
-        font-size: 1rem;
+        font-size: 0.8rem;
         width: 65%;
     }
 
     .detalle button{
-        font-size: 0.9rem;
+        font-size: 0.75rem;
+    }
+
+    .boton-ver-mas{
+        font-size: 0.8rem;
     }
     /* Fin de los ajustes en productos */
 
@@ -596,7 +642,7 @@
     }
 
     .footer-otros{
-        width: 50%;
+        width: 40%;
     }
 
     .footer-otros p{
