@@ -655,7 +655,7 @@
     /* Fin de los ajustes en el footer */
 }
 
-@media (min-width: 320px) and (max-width:576px){
+@media (min-width: 425px) and (max-width:576px){
 
     /* Ajustes en el header */
     header img{
@@ -710,6 +710,7 @@
     .navbar-lista li{
         display: flex;
         flex-direction: column;
+        font-size: 0.85rem;
     }
 
     .linea-texto{
@@ -733,7 +734,7 @@
     }
 
     .hero-info{
-        width: 85%;
+        width: 65%;
     }
 
     .hero-info h1{
@@ -746,20 +747,21 @@
 
     .boton-ver{
         width: 100px;
+        font-size: 0.75rem;
     }
     /* Fin de los ajustes en la seccion hero */
 
     /* Comienzo de ajustes en la sección nosotros */
      #nosotros h1{
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     .nosotros-info{
-        width: 275px;
+        width: 65%;
     }
 
     .nosotros-info p{
-        font-size: 0.9rem;
+        font-size: 0.75rem;
     }
 
     .compu{
@@ -767,9 +769,88 @@
     }
     /* Fin de los ajustes en la sección nosotros */
 
+    /* Comienzo de los ajustes de los filtros */
+    .filtros-contenedor{
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .categorias{
+        padding: 5px 8px;
+        font-size: 0.75rem;
+    }
+    /* Fin de los ajustes de los filtros */
+
+    /* Comienzo de los ajustes en el carrito de compras */
+    .carrito-compras{
+        width: 90%;
+        left: 10%;
+    }
+
+    .carrito-contenedor-producto img{
+        width: 20%;
+        height: auto;
+    }
+
+    .carrito-contenedor-producto{
+        width: 100%;
+        height: auto;
+        gap: 20px;
+    }
+
+    .carrito-contenedor-producto-info{
+        width: 60%;
+    }
+
+    .carrito-contenedor-producto-info h2{
+        font-size: 1rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .carrito-contenedor-producto-info p{
+        font-size: 0.85rem;
+    } 
+
+    .carrito-cotenedor-producto-botones{
+        width: 20%;
+    }
+
+    .disminuir{
+        font-size: 100%;
+        width: 100%;
+        height: auto;
+        padding: 5px 10px;
+    }
+
+    .aumentar{
+        font-size: 100%;
+        width: 100%;
+        height: auto;
+        padding: 5px 10px;
+    }
+
+    .cantidad{
+        font-size: 85%;
+    }
+
+    .boton-comprar{
+        padding: 10px 10px;
+        font-size: 80%;
+    }
+
+    .boton-vaciar{
+        padding: 10px 10px;
+        font-size: 80%; 
+    }
+
+    /* Fin de los ajustes en el carrito de compras */
+
     /* Comienzo de los ajustes en productos */
     #productos h1{
-        font-size: 1.4;
+        font-size: 1.2rem;
     }
 
     .teclado{
@@ -777,23 +858,28 @@
     }
 
     .card-producto{
-        height: 350px;
+        height: 325px;
         width: 100%;
     }
 
     .card-producto img{
-        width: 150px;
-        height: 150px;
+        width: 125px;
+        height: 125px;
     }
 
     .card-producto p{
-        font-size: 1rem;
+        font-size: 95%;
         width: 65%;
     }
 
     .detalle button{
-        font-size: 0.9rem;
+        font-size: 70%;
     }
+
+    .boton-ver-mas{
+        font-size: 70%;
+    }
+    
     /* Fin de los ajustes en productos */
 
     /* Comienzo de ajustes en la seccion contacto */
