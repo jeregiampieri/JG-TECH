@@ -655,7 +655,7 @@
     /* Fin de los ajustes en el footer */
 }
 
-@media (min-width: 425px) and (max-width:576px){
+@media (min-width: 320px) and (max-width:576px){
 
     /* Ajustes en el header */
     header img{
