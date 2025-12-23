@@ -536,9 +536,8 @@ header img{
     display: flex;
     flex-direction: column;
     position: fixed;
-    width: 32%;
-    left: 68%;
-    right: 0;
+    width: 35%;
+    left: 65%;
     height: calc(100vh - 70px);
     top: 70px;
     padding: 30px;
@@ -583,22 +582,23 @@ header img{
     background-color: black;
     border: 1px solid rgb(219, 219, 219);
     padding: 20px;
-    gap: 30px;
+    gap: 20px;
 }
 
 .carrito-contenedor-producto img{
-    width: 100px;
-    height: 100px;
+    width: 30%;
+    height: 80%;
 }
 
 .carrito-contenedor-producto-info{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 100%;
 }
 
 .carrito-contenedor-producto-info h2{
-    font-size: 13px;
+    font-size: 0.9rem;
 }
 
 .carrito-contenedor-producto-info p{

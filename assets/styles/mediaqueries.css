@@ -160,14 +160,18 @@
         left: 58%;
     }
 
+    .carrito-contenedor-producto{
+        gap: 10px;
+    }
+
     .carrito-contenedor-producto img{
-    width: 30%;
-    height: 80%;
-}
+        width: 100px;
+        height: 110px;
+    }
 
     .carrito-contenedor-producto{
         width: 100%;
-        gap: 10%;
+        gap: 20px;
     }
 
     .carrito-contenedor-producto-info{
@@ -175,11 +179,11 @@
     }
     
     .carrito-contenedor-producto-info h2{
-        font-size: 0.91rem;
+        font-size: 0.9rem;
     }
 
     .carrito-contenedor-producto-info p{
-    font-size: 0.91rem;
+    font-size: 0.95rem;
 }
 
     /* Fin de los ajustes en el carrito */
@@ -251,8 +255,8 @@
     .navbar-lista{
         position: absolute;
         top: 70px;
-        width: 50%;
-        left: -10%;
+        width: 90%;
+        left: 5%;
         flex-direction: column;
         gap: 30px;
         justify-content: center;
@@ -266,7 +270,7 @@
         border-top: none;
         text-align: center;
         border-radius: 2px;
-        transform: translateX(0%);
+        transform: translateX(150%);
         transition: all 0.3s cubic-bezier(0.92, 0.01, 0.35, 0.99);
         padding: 1.1% 0px 1.1% 0px;
         z-index: 2;
@@ -330,9 +334,21 @@
     }
     /* Fin de los ajustes en la sección nosotros */
 
+    /* Comienzo de los ajustes en los filtros */
+    .filtros-contenedor{
+        width: 100%;
+        gap: 17px;
+    }
+
+    .categorias{
+        padding: 5px 10px;
+        font-size: 0.95rem;
+    }
+    /* Fin de los ajustes en los filtro */
+
     /* Comienzo de los ajustes en productos */
     #productos h1{
-        font-size: 1.4;
+        font-size: 1.4rem;
     }
 
     .teclado{
@@ -358,6 +374,34 @@
         font-size: 0.9rem;
     }
     /* Fin de los ajustes en productos */
+
+    /* Comienzo de los ajustes en el carrito de compras */
+    .carrito-compras{
+        width: 50%;
+        left: 50%;
+    }
+
+     .carrito-contenedor-producto img{
+        width: 100px;
+        height: 110px;
+    }
+
+    .carrito-contenedor-producto{
+        width: 100%;
+    }
+
+    .carrito-contenedor-producto-info{
+        width: 70%;
+    }
+
+    .carrito-contenedor-producto-info h2{
+        font-size: 0.88rem;
+    }
+
+    .carrito-contenedor-producto-info p{
+        font-size: 0.95rem;
+    }
+    /* Fin de los ajustes en el carrito de compras */
 
     /* Comienzo de ajustes en la seccion contacto */
     #contacto h1{
