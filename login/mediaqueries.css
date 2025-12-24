@@ -1,0 +1,177 @@
+@media (min-width:576px) and (max-width:700px){
+
+    #inicio-sesion{
+        margin-top: 30%;
+    }
+
+    .contenedor-inicio-sesion{
+        width: 390px;
+        height: 390px;
+        gap: 25px;
+    }
+
+    .imagen{
+        width: 390px;
+        height: 390px;
+    }
+
+    .icono{
+        left: 10px;
+    }
+
+    .inicio-sesion-texto h2{
+        font-size: 22px;
+    }
+
+    .boton-login{
+        width: 45%;
+    }
+
+    .boton-contraseña{
+        width: 45%;
+    }
+}
+
+@media (min-width:440px) and (max-width:576px){
+
+    #inicio-sesion{
+        margin-top: 43%;
+    }
+
+    .contenedor-inicio-sesion{
+        width: 325px;
+        height: 370px;
+        gap: 25px;
+    }
+
+    .imagen{
+        width: 325px;
+        height: 370px;
+    }
+
+    .icono{
+        left: 10px;
+    }
+
+    .inicio-sesion-texto h2{
+        font-size: 20px;
+    }
+
+    .boton-login{
+        width: 35%;
+    }
+
+    .boton-contraseña{
+        width: 55%;
+    }
+
+    .inicio-sesion-crear-cuenta{
+        font-size: 15px;
+        margin-top: 5px;
+        gap: 25px;
+    }
+}
+
+@media (min-width:440px) and (max-width:576px){
+    #inicio-sesion{
+        margin-top: 43%;
+    }
+
+    .contenedor-inicio-sesion{
+        width: 325px;
+        height: 370px;
+        gap: 25px;
+    }
+
+    .imagen{
+        width: 325px;
+        height: 370px;
+    }
+
+    .icono{
+        left: 10px;
+    }
+
+    .inicio-sesion-texto h2{
+        font-size: 20px;
+    }
+
+    .boton-login{
+        width: 55%;
+        font-size: 12.5px;
+    }
+
+    .boton-contraseña{
+        width: 55%;
+        font-size: 12.5px;
+    }
+
+    .inicio-sesion-crear-cuenta{
+        font-size: 15px;
+        margin-top: 5px;
+        gap: 25px;
+    }
+
+    .inicio-sesion-info input{
+        width: 65%;
+    }
+
+
+}
+
+@media (min-width:320px) and (max-width:440px){
+    #inicio-sesion{
+        margin-top: 50%;
+    }
+
+    .contenedor-inicio-sesion{
+        width: 300px;
+        height: 390px;
+        gap: 30px;
+    }
+
+    .imagen{
+        width: 300px;
+        height: 390px;
+    }
+
+    .icono{
+        font-size: 12px;
+        bottom: 3px;
+        left: 4px;
+    }
+
+    .inicio-sesion-texto h2{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .inicio-sesion-crear-cuenta{
+        font-size: 15px;
+        margin-top: 5px;
+        gap: 25px;
+    }
+
+    .usuario{
+        font-size: 12px;
+    }
+
+    .contraseña{
+        font-size: 12px;
+    }
+
+    .boton-login{
+        padding: 5px;
+        font-size: 12px;
+    }
+    
+    .boton-contraseña{
+        padding: 5px 5px;
+        width: auto;
+        font-size: 12px;
+    }
+
+    .inicio-sesion-info input{
+        width: 65%;
+    }
+}
