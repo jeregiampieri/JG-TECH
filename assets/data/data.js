@@ -1,7 +1,7 @@
 // Definición del conjunto de objetos (es un array, con definición de objetos dentro)
 
 // Array de objetos que contiene todos los productos
-const productosData = [
+export const productosData = [
     // Objeto 1
     {
         id: 1,
@@ -302,7 +302,7 @@ const paginacionProducts = (cantidadProductos) => {
 }
 
 //Objeto que me permite mantener y conocer el 'estado' de la página
-const appState = {
+export const appState = {
     products: paginacionProducts(8),
     cantMaxPage: paginacionProducts(8).length, 
     currentProductsIndex: 0,
