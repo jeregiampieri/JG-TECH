@@ -496,14 +496,28 @@ header img{
     gap: 20px;
 }
 
+.telefono::-webkit-inner-spin-button,
+::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.contenedores-formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: first baseline;
+    width: 80%;
+    gap: 5px;
+}
+
 .contacto-info input{
     background-color: #101112;
     border: none;
     outline: none;
     border-bottom: 1px solid white;
-    padding: 5px;
+    padding: 5px 0px;
     color: white;
-    width: 80%;
+    width: 100%;
 }
 
 .contacto-info textarea{
@@ -511,7 +525,7 @@ header img{
     border: 1px solid white;
     padding: 5px;
     color: white;
-    width: 80%;
+    width: 100%;
     resize: none;
 }
 
@@ -527,6 +541,11 @@ header img{
     background-color: #101112;
     color: white;
     border: 1px solid white;
+}
+
+.error{
+    color: rgba(255, 0, 0, 0.705);
+    font-size: 12px;
 }
 /* Fin de los ajustes en contacto */
 

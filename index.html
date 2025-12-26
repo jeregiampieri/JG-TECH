@@ -117,11 +117,23 @@
                     <img src="./img/logoSolo.png" alt="Imagen de JG-TECH">
                 </div>
                 <div class="contacto-info">
-                    <input type="text" placeholder="Ingrese su nombre aquí...">
-                    <input type="number" placeholder="Ingrese su número aquí...">
-                    <input type="email" placeholder="example@gmail.com">
-                    <textarea cols="30" rows="10" placeholder="Comenta en un breve texto tu consulta..."></textarea>
-                    <button>Enviar</button>
+                    <div class="contenedores-formulario">
+                        <input type="text" class="nombre" placeholder="Ingrese su nombre aquí...">
+                        <p class="error error-nombre esconder">El campo nombre es obligatorio</p>
+                    </div>
+                    <div class="contenedores-formulario">
+                        <input type="number" class="telefono" placeholder="Ingrese su número aquí...">
+                        <p class="error error-numero esconder ">El número telefónico es obligatorio</p>
+                    </div>
+                    <div class="contenedores-formulario">
+                        <input type="email" class="mail" placeholder="example@gmail.com">
+                        <p class="error error-mail esconder">El campo mail es obligatorio</p>
+                    </div>
+                    <div class="contenedores-formulario">
+                        <textarea class="consulta" cols="30" rows="10" placeholder="Comenta en un breve texto tu consulta..."></textarea>
+                        <p class="error error-consulta esconder">Por favor, debe ingresar una consulta</p>
+                    </div>
+                    <button class="boton-enviar">Enviar</button>
                 </div>
             </div>
           </section>
@@ -190,8 +202,8 @@
                 </div>
             </div>
         </footer>
-     </div>
-     <div class="agregar-modal esconder-modal"></div>
-     <script src="main.js" type="module"></script>
+    </div>
+    <div class="agregar-modal esconder-modal"></div>
+    <script src="main.js" type="module"></script>
 </body>
 </html>
