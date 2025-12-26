@@ -50,7 +50,7 @@ const manejoError = () => {
     const formularioValidado = validarFormulario()
 
     if (formularioValidado){
-         const validacionNombre = validarCampoNombre()
+        const validacionNombre = validarCampoNombre()
         const validacionTelefono = validarCampoTelefono()
         const validacionConsulta = validarConsulta()
 
@@ -75,13 +75,21 @@ const validarCampoNombre = () => {
 }
 
 const validarCampoTelefono = () => {
+
+    if (telefono.value.length === 0){
+        errorNumero.classList.add("esconder")
+        return false
+    }
+
     if (telefono.value.length < 10){
         errorNumero.innerHTML = "El campo telefóno debe contener mínimo 10 dígitos"
         errorNumero.classList.remove("esconder")
-    }else{
-        errorNumero.classList.add("esconder")
-        return true
+        return false
     }
+
+    errorNumero.classList.add("esconder")
+    return true
+    
 }
 
 const validarConsulta = () => {
