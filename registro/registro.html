@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio de sesión</title>
+    <title>Registro</title>
     <link rel="apple-touch-icon" sizes="180x180" href="./fav-icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./fav-icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./fav-icons/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="manifest" href="./fav-icons/site.webmanifest">
     <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaqueries.css">
@@ -15,7 +15,6 @@
 </head>
 <body>
     <main>
-
         <section id="inicio-sesion">
             <img src="../img/imagen-PC.jpg" alt="Imagen de PC" class="imagen">
             <div class="contenedor-inicio-sesion">
@@ -25,24 +24,25 @@
                     </a>
                     <div class="inicio-sesion-texto">
                         <img src="../img/logoSolo.png" alt="Logo de JG-TECH">
-                        <h2>Inicio de sesión</h2>
+                        <h2>Registro</h2>
                     </div>
                 </div>
                 <div class="inicio-sesion-info">
-                    <input type="text" placeholder="Usuario o email" class="usuario">
-                    <input type="password" placeholder="Contraseña" class="contraseña">
+                    <input type="text" placeholder="Nombre">
+                    <input type="text" placeholder="Apellido">
+                    <input type="email" placeholder="example@gmail.com">
+                    <input type="text" placeholder="Usuario">
+                    <input type="password" placeholder="Contraseña">
+                    <input type="password" placeholder="Repetir contraseña">
                 </div>
                 <div class="inicio-sesion-botones">
-                    <button class="boton-login">Login</button>
-                    <button class="boton-contraseña">Olvide mi contraseña</button>
+                    <button class="boton-login">Crear</button>
                 </div>
                 <div class="inicio-sesion-crear-cuenta">
-                    <p>¿No tenes cuenta?</p>
-                    <a href="../registro/registro.html">Crear</a>
+                    <a href="../login/login.html">Ya tengo cuenta</a>
                 </div>
             </div>
         </section>
-
     </main>    
 </body>
 </html>
