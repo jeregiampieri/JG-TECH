@@ -496,6 +496,14 @@ header img{
     gap: 20px;
 }
 
+.consulta{
+    overflow-y: auto;
+}
+
+.consulta::-webkit-scrollbar{
+    width: 0px;
+}
+
 .telefono::-webkit-inner-spin-button,
 ::-webkit-inner-spin-button{
     -webkit-appearance: none;

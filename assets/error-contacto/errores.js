@@ -46,24 +46,58 @@ const validarFormulario = () => {
 }
 
 const manejoError = () => {
-
     // Para mantener almacenado en una variable un array con la validacion de los campos
     const formularioValidado = validarFormulario()
 
     if (formularioValidado){
-        window.alert("¡Su consulta fue enviada con éxito! Pronto nos contactaremos con usted.")
+         const validacionNombre = validarCampoNombre()
+        const validacionTelefono = validarCampoTelefono()
+        const validacionConsulta = validarConsulta()
 
-        campos.forEach((campo) => {
-            campo.campo.value = ""
-        })
+        if (validacionNombre && validacionTelefono && validacionConsulta ){
+            window.alert("¡Su consulta fue enviada con éxito! Pronto nos contactaremos con usted.")
+
+            campos.forEach((campo) => {
+                campo.campo.value = ""
+            })
+        }
     }
 }
 
-const validarMensaje = () => {
-    if (nombre.)
+const validarCampoNombre = () => {
+    if (/\d/.test(nombre.value)){
+        errorNombre.innerHTML = "En este campo solo es válido usar carácteres"
+        errorNombre.classList.remove("esconder")
+    } else{
+        errorNombre.classList.add("esconder")
+        return true
+    }
+}
+
+const validarCampoTelefono = () => {
+    if (telefono.value.length < 10){
+        errorNumero.innerHTML = "El campo telefóno debe contener mínimo 10 dígitos"
+        errorNumero.classList.remove("esconder")
+    }else{
+        errorNumero.classList.add("esconder")
+        return true
+    }
+}
+
+const validarConsulta = () => {
+    if (consulta.value.length > 200){
+        errorConsulta.innerHTML = "La consulta no puede superar los 200 carácteres"
+        errorConsulta.classList.remove("esconder")
+    }else {
+        errorConsulta.classList.add("esconder")
+        return true
+    }
 }
 
 export const erroresInit = () => {
     botonEnviar.addEventListener("click", manejoError)
-    nombre.addEventListener("blur", validarMensaje)
+    nombre.addEventListener("blur", validarCampoNombre)
+    telefono.addEventListener("blur", validarCampoTelefono)
+    consulta.addEventListener("blur", validarConsulta)
+
 }
