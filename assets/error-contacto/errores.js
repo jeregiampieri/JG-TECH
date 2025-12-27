@@ -75,7 +75,6 @@ const validarCampoNombre = () => {
 }
 
 const validarCampoTelefono = () => {
-
     if (telefono.value.length === 0){
         errorNumero.classList.add("esconder")
         return false
@@ -88,8 +87,7 @@ const validarCampoTelefono = () => {
     }
 
     errorNumero.classList.add("esconder")
-    return true
-    
+    return true  
 }
 
 const validarConsulta = () => {
@@ -107,5 +105,4 @@ export const erroresInit = () => {
     nombre.addEventListener("blur", validarCampoNombre)
     telefono.addEventListener("blur", validarCampoTelefono)
     consulta.addEventListener("blur", validarConsulta)
-
 }
